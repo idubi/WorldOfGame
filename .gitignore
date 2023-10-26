@@ -1,0 +1,15 @@
+node_modules
+/venv/
+/node_modules/
+*.exe
+.idea
+Pillow*
+.git
+.edea
+venv
+.vscode
+__pycache__
+/.history/
+.history
+*Venv*
+*__*
