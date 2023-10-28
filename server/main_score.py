@@ -58,7 +58,7 @@ def score_server(user_name):
             return generate_score_html(user_name,data)
         else :
             path =   os.path.join(os.getcwd() , SCORES_FILE_NAME.lstrip("./"))
-            err_msg = 'scores data store is not available ,please verify crores file path existance ({path})'.format(path = path)
+            err_msg = 'scores data store is not available , or not valid. <br> please verify file and data in path : {path}'.format(path = path)
             err_code = BAD_RETURN_CODE
             raise Exception(f"code: {err_code} , Message: {err_msg}")
     except BaseException as e:
