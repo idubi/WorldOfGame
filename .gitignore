@@ -13,3 +13,4 @@ __pycache__
 .history
 *Venv*
 *__*
+/chromedriver*
