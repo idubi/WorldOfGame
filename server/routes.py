@@ -9,7 +9,7 @@ main = Blueprint('main', __name__)
 @main.route('/',methods=['GET'])
 def index():
     return '<p>Hello from the score server , world of games - level 3 ! </p>' \
-            '<p> all apis are on <b>/api/v1 </b> base route</p>'
+            '<p> all apis are on  base route</p>'
 
 @main.route('/score',methods=['GET'])
 def score():
