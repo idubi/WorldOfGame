@@ -1,0 +1,22 @@
+version: '3'
+services:
+  scores-srv:
+    build: .
+    ports:
+      - 8777:30000
+    depends_on:
+      - scores-db
+  scores-db:
+    image: mariadb:latest
+    ports:
+      - 3306:3306
+    environment:
+      MARIADB_ROOT_PASSWORD: adminroot
+      MARIADB_USER: scores
+      MARIADB_PASSWORD: scores
+      MARIADB_DATABASE: scoresdb
+
+
+
+
+
