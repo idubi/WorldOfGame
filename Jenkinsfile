@@ -13,7 +13,7 @@ pipeline {
                     submoduleCfg: [],
                     userRemoteConfigs: [[
                         url: 'https://github.com/idubi/WorldOfGame', // Replace with your GitHub repository URL
-                        credentialsId: 'jenkins-login@idubi' // Replace with your GitHub credentials ID
+                        credentialsId: 'idubi_github' // Replace with your GitHub credentials ID
                     ]]
                 ])
             }
