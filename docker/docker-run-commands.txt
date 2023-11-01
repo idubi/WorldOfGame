@@ -1,2 +1,10 @@
 docker build -t scores-server -f ./docker/Dockerfile-python-alpin .
 docker run -d --name scores-srv -p 8777:30000 scores-server
+
+docker run -d -p 8080:8080  -p 8000:80 -p 50000:50000 -p4430:443 --name jenkins --network jenkins-network --volume /c/Users/idobi/.docker/JENKINS/jenkins-data:/bitnami/jenkins --env JENKINS_USERNAME=admin --env JENKINS_PASSWORD=bitnami --env JENKINS_EMAIL=idubi.pro@gmail.com bitnami/jenkins:latest
+
+
+
+#docker run --detach --name some-mariadb --env MARIADB_ROOT_PASSWORD=my-secret-pw  mariadb:latest
+docker  docker run -d --name scores-db --env MARIADB_ROOT_PASSWORD=root  mariadb:latest
+
