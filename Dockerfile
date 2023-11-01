@@ -1,14 +1,14 @@
 # Use the official Python image as the base image with Alpine Linux
 FROM python:3.12-alpine
 
-WORKDIR /app
+WORKDIR /
 # Copy all your Python application files into the container
-COPY ./server  /app/server
-COPY ./const /app/const
-COPY ./app.py /app/app.py 
-COPY ./score.py /app/score.py
-COPY ./utils.py /app/utils.py
-COPY ./scores.txt /app/scores.txt
+COPY ./server  /server
+COPY ./const /const
+COPY ./app.py /app.py 
+COPY ./score.py /score.py
+COPY ./utils.py /utils.py
+COPY ./resources/scores.txt /resources/scores.txt
 COPY ./resources/requirements.txt requirements.txt
 
 
@@ -21,7 +21,7 @@ RUN apk add --no-cache python3 && \
 # RUN apt install python3-pip
 RUN pip install --upgrade pip
 RUN pip install -r requirements.txt
-RUN ln -s /app/scores.txt  /scores.txt
+RUN ln -s /resources/scores.txt  /scores.txt
 RUN apk add curl
 
 # Expose the port on which Flask server will run
