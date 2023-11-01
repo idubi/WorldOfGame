@@ -19,11 +19,11 @@ pipeline {
             }
         }
         
-        stage('Build') {
-            steps {
-                // Add build steps here
-            }
-        }
+        // stage('Build') {
+        //     steps {
+        //         'checkout wirkd of games from github
+        //     }
+        // }
         
         // Add more stages as needed for your build and deployment process
     }
