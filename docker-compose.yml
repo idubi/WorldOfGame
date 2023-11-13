@@ -15,6 +15,12 @@ services:
       MARIADB_USER: scores
       MARIADB_PASSWORD: scores
       MARIADB_DATABASE: scoresdb
+#   jenkins:
+#     volumes:
+#       - 'jenkins_data:/bitnami/jenkins
+# volumes:
+#   jenkins_data:
+#     driver: local
 networks:
   jenkins-network:
     external: 
