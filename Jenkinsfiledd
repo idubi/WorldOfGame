@@ -1,18 +1,21 @@
 
 properties([  githubProjectProperty(displayName: 'CHECKOUT WOG from git', 
-                                    projectUrlStr: 'https://github.com/idubi/WorldOfGame/',
-                                    description:  'CHECKOUT WOG from git'), 
+                                    projectUrlStr: 'https://github.com/idubi/WorldOfGame/'), 
               
               parameters([string(defaultValue: 'idubi_github', description: 'the credentials to login to github', name: 'github_credentials_id'),
                         string(defaultValue: 'https://github.com/idubi/WorldOfGame/', description: 'the github repo', name: 'github_repository_url'), 
                         string(defaultValue: 'jenkins', description: 'github branch to checkut', name: 'github_branch'), 
-                        string(defaultValue: 'Jenkinsfile', description: 'the jenkinsfile script  file name to execute ', name: 'script_file')
                       ])
               ])
 pipeline {
     agent any
 
     stages {
+        stage('Clean Workspace') {
+            steps {
+                cleanWs()
+            }
+        }
         stage('Checkout') {
             steps {
                 checkout([
