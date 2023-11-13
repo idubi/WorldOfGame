@@ -1,0 +1,59 @@
+persistence:
+  enabled: true
+  existingClaim: jenkins-pvc
+  storageClass: manual
+  size: 10Gi
+
+agent:
+  volumes:
+    - type: HostPath
+      hostPath: d:/jenkins
+      mountPath: /var/jenkins_home
+
+jenkinsUriPrefix: /jenkins
+
+jenkins:
+  agent:
+    enabled: true
+  controller:
+    JCasC:
+      enabled: true
+      defaultConfig: true
+      configScripts:
+        credentials : |
+          credentials:
+            system:
+              domainCredentials:
+                - credentials:
+                    - gitHubApp:
+                        appID: "idubi"
+                        privateKey: "your-private-key"
+                        description: "GitHub App"
+                        owner: "idubi"
+                        apiUri: "https://api.github.com"
+  service:
+    type: LoadBalancer
+    port: 80 # for HTTP
+    targetPort: 8080
+    annotations: {}
+    jnlpPort: 50000 # for JNLP
+    udpPort: 33848 # for UDP
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: jenkins-ingress
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
+spec:
+  rules:
+  - host: jenkins.yourdomain.com
+    http:
+      paths:
+      - pathType: Prefix
+        path: "/"
+        backend:
+          service:
+            name: my-jenkins
+            port:
+              number: 80

@@ -5,6 +5,35 @@ docker run -d -p 8080:8080  -p 8000:80 -p 50000:50000 -p4430:443 --name jenkins 
 
 
 
+
+docker run -d -p 8080:8080  -p 8000:80 -p 50000:50000 -p4430:443 --name jenkins --network jenkins-network --volume /c/Users/idobi/.docker/JENKINS/jenkins-data:bitnami/jenkins --env JENKINS_USERNAME=admin --env JENKINS_PASSWORD=bitnami --env JENKINS_EMAIL=idubi.pro@gmail.com bitnami/jenkins:latest
+
+
+curl -sO http://localhost:8080/jnlpJars/agent.jar
+java -jar agent.jar -jnlpUrl http://localhost:8080/computer/jenkins/jenkins-agent.jnlp -secret 5ed1e942f1e487e4f00a9d163f9ca4a6b8cd7d52ff7ec1a560518387b35cb42c workDir "/jenkins"
+
+
 #docker run --detach --name some-mariadb --env MARIADB_ROOT_PASSWORD=my-secret-pw  mariadb:latest
 docker  docker run -d --name scores-db --env MARIADB_ROOT_PASSWORD=root  mariadb:latest
+
+
+
+
+
+docker run -d -p 8080:8080  -p 8000:80 -p 50000:50000 -p4430:443 --name jenkins --network jenkins-network --volume jenkins_data:./jenkins/jenkins-data:/bitnami/jenkins --env JENKINS_USERNAME=idubi --env JENKINS_PASSWORD=bitnami --env JENKINS_EMAIL=idubi.pro@gmail.com bitnami/jenkins:latest
+
+docker network create jenkins-network
+
+docker run -d -p 80:8080 --name jenkins --network jenkins-network --volume ./jenkins/jenkins-data:/bitnami/jenkins 
+ 
+
+
+docker run -d -p 8080:8080  -p 8000:80 -p 50000:50000 -p4430:443 --name jenkins --network jenkins-network --volume ./bitnami/jenkins/data:/jenkins/data --env JENKINS_PASSWORD=bitnami --env JENKINS_EMAIL=idubi.pro@gmail.com bitnami/jenkins:latest     
+
+
+
+
+
+
+  docker run -d -p 8080:8080  -p 8000:80 -p 50000:50000 -p4430:443 --name jenkins --network jenkins-network --volume ./binami/jenkins/data:/jenkins/jenkins-data  --env JENKINS_USERNAME=admin --env JENKINS_PASSWORD=bitnami --env JENKINS_EMAIL=idubi.pro@gmail.com bitnami/jenkins:latest
 

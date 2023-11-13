@@ -19,11 +19,15 @@ pipeline {
             }
         }
         
-        // stage('Build') {
-        //     steps {
-        //         'checkout wirkd of games from github
-        //     }
-        // }
+        
+        stage('build docker and deploy with scores file') {
+            steps {
+                build([
+                    sh 'cd /${WORKSPACE}/'
+
+                ])
+            }
+        }
         
         // Add more stages as needed for your build and deployment process
     }
