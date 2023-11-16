@@ -1,0 +1,20 @@
+# Use Alpine Linux as the base image
+FROM alpine:latest
+
+# Install Docker
+RUN apk --no-cache add docker openrc
+
+# Install Nginx
+RUN apk --no-cache add nginx
+
+# Create directory for Nginx PID file and logs
+RUN mkdir -p /run/nginx
+
+# Copy Nginx configuration file (if you have a custom one)
+# COPY nginx.conf /etc/nginx/nginx.conf
+
+# Ensure docker daemon starts on container startup
+RUN rc-update add docker boot
+
+# Start Docker and Nginx when the container launches
+CMD ["sh", "-c", "nginx -g 'daemon off;'"]
