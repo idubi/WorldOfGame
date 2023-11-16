@@ -2,10 +2,6 @@
 properties([  githubProjectProperty(displayName: 'CHECKOUT WOG from git', 
                                     projectUrlStr: 'https://github.com/idubi/WorldOfGame/'), 
               
-              parameters([string(defaultValue: 'idubi_github', description: 'the credentials to login to github', name: 'github_credentials_id'),
-                        string(defaultValue: 'https://github.com/idubi/WorldOfGame/', description: 'the github repo', name: 'github_repository_url'), 
-                        string(defaultValue: 'jenkins', description: 'github branch to checkut', name: 'github_branch'), 
-                      ])
               ])
 pipeline {
     agent any
@@ -20,10 +16,10 @@ pipeline {
             steps {
                 checkout([
                     $class: 'GitSCM', 
-                    branches: [[name: "*/${params.github_branch}"]], 
+                    branches: [[name: "*/main"]], 
                     userRemoteConfigs: [[
-                        url: '${github_repository_url}',
-                        credentialsId: '${github_credentials_id}'
+                        url: 'https://github.com/idubi/WorldOfGame/',
+                        credentialsId: 'idubi_github'
                     ]]
                 ])
             }
