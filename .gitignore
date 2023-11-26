@@ -15,4 +15,6 @@ __pycache__
 *__*
 /chromedriver*
 jenkins/jenkins-data/
-
+*.zip*
+*.jar
+/gitignore/

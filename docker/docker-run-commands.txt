@@ -13,8 +13,6 @@ docker build -t docker-nginx-alpin -f ./Docker/Dockerfile-nginx-docker-alpine .
 
 
 
-
-
  
 docker run -d --name scores-srv -p 8777:30000 scores-server
 
@@ -41,7 +39,7 @@ install docker
 for pkg in docker.io docker-doc docker-compose podman-docker containerd runc; do sudo apt-get remove $pkg; done 
 
 
-
+ "while true; do sleep 30; done"
 
 
 
@@ -52,9 +50,9 @@ java -jar agent.jar -jnlpUrl http://localhost:8080/computer/jenkins/jenkins-agen
 
 docker pull bitnami/jenkins-agent:latest
 docker run -d --name jenkins-agent --env JENKINS_URL=http://host.docker.internal:50000   bitnami/jenkins-agent:latest -c "while true; do sleep 3600; done"
-docker run -d -p 8080:8080  -p 8000:80 -p 50000:50000 -p4430:443 --name jenkins --network jenkins-network --volume jenkins_home:/var/jenkins_home --env JENKINS_USERNAME=admin --env JENKINS_PASSWORD=bitnami --env JENKINS_EMAIL=idubi.pro@gmail.com bitnami/jenkins:latest
-docker run -d -p 8080:8080  -p 8000:80 -p 50000:50000 -p4430:443 --name jenkins --network jenkins-network --volume jenkins_home:/var/jenkins_home --env JENKINS_USERNAME=admin --env JENKINS_PASSWORD=bitnami --env JENKINS_EMAIL=idubi.pro@gmail.com bitnami/jenkins:latest
-docker run -d -p 8080:8080  -p 8000:80 -p 50000:50000 -p4430:443 --name jenkins --network jenkins-network --volume jenkins_home:/var/jenkins_home --env JENKINS_USERNAME=idubi --env JENKINS_PASSWORD=bitnami --env JENKINS_EMAIL=idubi.pro@gmail.com bitnami/jenkins:latest
+docker run -d -p 8080:8080  -p 8000:80 -p 50000:50000 -p 4430:443 --name jenkins --network jenkins-network --volume jenkins_home:/var/jenkins_home --env JENKINS_USERNAME=admin --env JENKINS_PASSWORD=bitnami --env JENKINS_EMAIL=idubi.pro@gmail.com bitnami/jenkins:latest
+docker run -d -p 8080:8080  -p 8000:80 -p 50000:50000 -p 4430:443 --name jenkins --network jenkins-network --volume jenkins_home:/var/jenkins_home --env JENKINS_USERNAME=admin --env JENKINS_PASSWORD=bitnami --env JENKINS_EMAIL=idubi.pro@gmail.com bitnami/jenkins:latest
+docker run -d -p 8080:8080  -p 8000:80 -p 50000:50000 -p 4430:443 --name jenkins --network jenkins-network --volume jenkins_home:/var/jenkins_home --env JENKINS_USERNAME=idubi --env JENKINS_PASSWORD=bitnami --env JENKINS_EMAIL=idubi.pro@gmail.com bitnami/jenkins:latest
 docker network create jenkins-network
 docker run -d -p 80:8080 --name jenkins --network jenkins-network --volume ./jenkins/jenkins-data:/bitnami/jenkins 
 
@@ -70,3 +68,31 @@ $ docker pull bitnami/jenkins-agent:latest
 
 
 curl http://host.docker.internal:8080
+curl http://host.docker.internal:2375/version 
+
+
+
+docker build -t jenkins-with-docker -f ./docker/Dokerfile-jenkins-with-docker . 
+
+
+ 
+docker run -d -p 8080:8080  -p 8000:80 -p 50000:50000 -p443:443 --name jenkins --network jenkins-network --volume genkins-vo:\var\jenkins_home --env JENKINS_USERNAME=admin --env JENKINS_PASSWORD=bitnami --env JENKINS_EMAIL=idubi.pro@gmail.com 
+
+
+docker run -it --privileged --name dind -d docker:dind
+
+
+docker volume create genkins-vol
+
+
+docker run -d -p 8080:8080 -p 8000:80 -p 50000:50000 -p 443:443 --name jenkins \
+--network jenkins-network --volume "D:\projects\WorldOfGame\jenkins\jenkins-data":/bitnami/jenkins \
+--env JENKINS_USERNAME=admin --env JENKINS_PASSWORD=bitnami --env JENKINS_EMAIL=idubi.pro@gmail.com bitnami/jenkins:latest
+
+
+
+
+docker run -d -p 8080:8080 -p 8000:80 -p 50000:50000 -p 443:443 \
+--name jenkins --network jenkins-network --volume "D:\projects\WorldOfGame\jenkins\jenkins-data":/var/jenkins_home \
+   --env JENKINS_USERNAME=admin --env JENKINS_PASSWORD=bitnami --env JENKINS_EMAIL=idubi.pro@gmail.com jenkins/jenkins:latest
+

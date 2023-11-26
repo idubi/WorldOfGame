@@ -22,7 +22,7 @@ RUN apk add --no-cache python3 && \
 RUN pip install --upgrade pip
 RUN pip install -r requirements.txt
 RUN ln -s /resources/scores.txt  /scores.txt
-RUN apk add curl
+#RUN apk add curl
 
 # Expose the port on which Flask server will run
 # I had tried this but once I set it , I get this ERR_EMPTY_RESPONSE when calling to the docker port
