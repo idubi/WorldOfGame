@@ -4,7 +4,9 @@ properties([  githubProjectProperty(displayName: 'CHECKOUT WOG from git',
               
               ])
 pipeline {
-    agent any
+    agent  {
+                    label "win-agent"
+                }
 
     stages {
         stage('Clean Workspace') {
