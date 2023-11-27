@@ -32,7 +32,7 @@ pipeline {
                     // Navigate to the directory containing your Dockerfile
                     dir('.') {
                         // Build a Docker image using the Dockerfile
-                        sh 'docker build -t WORLD_OF_GAMES .'
+                        bat 'docker build -t WORLD_OF_GAMES .'
                     }
                 }
             }
@@ -41,7 +41,7 @@ pipeline {
             steps {
                 script {
                     // Run a Docker container from the previously built image
-                    sh 'docker run -d --name wow-app WORLD_OF_GAMES'
+                    bat 'docker run -d --name wow-app WORLD_OF_GAMES'
                 }
             }
         }

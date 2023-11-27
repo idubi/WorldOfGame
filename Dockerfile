@@ -26,7 +26,7 @@ RUN ln -s /resources/scores.txt  /scores.txt
 
 # Expose the port on which Flask server will run
 # I had tried this but once I set it , I get this ERR_EMPTY_RESPONSE when calling to the docker port
-# EXPOSE 8777
+EXPOSE 8777
 
 # Start the Flask server (modify the command as per your application)
 CMD ["python", "app.py"]

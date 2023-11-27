@@ -18,3 +18,4 @@ jenkins/jenkins-data/
 *.zip*
 *.jar
 /gitignore/
+start.sh
