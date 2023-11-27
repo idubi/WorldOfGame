@@ -26,6 +26,26 @@ pipeline {
                 ])
             }
         }
+         stage('Build Docker Image') {
+            steps {
+                script {
+                    // Navigate to the directory containing your Dockerfile
+                    dir('.') {
+                        // Build a Docker image using the Dockerfile
+                        sh 'docker build -t WORLD_OF_GAMES .'
+                    }
+                }
+            }
+        }
+          stage('Run Docker Container') {
+            steps {
+                script {
+                    // Run a Docker container from the previously built image
+                    sh 'docker run -d --name wow-app WORLD_OF_GAMES'
+                }
+            }
+        }
+        
 
       
 
@@ -34,4 +54,3 @@ pipeline {
     // }
 }
 }
-
