@@ -5,7 +5,7 @@ WORKDIR /
 # Copy all your Python application files into the container
 COPY ./server /server
 COPY ./const /const
-COPY ./statis /static
+COPY ./static /static
 COPY ./app.py /app.py 
 COPY ./score.py /score.py
 COPY ./utils.py /utils.py
