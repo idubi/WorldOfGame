@@ -3,14 +3,14 @@ FROM python:3.12-alpine
 
 WORKDIR /
 # Copy all your Python application files into the container
-COPY ./server  /server
+COPY ./server /server
 COPY ./const /const
+COPY ./statis /static
 COPY ./app.py /app.py 
 COPY ./score.py /score.py
 COPY ./utils.py /utils.py
 COPY ./resources/scores.txt /resources/scores.txt
 COPY ./resources/requirements.txt requirements.txt
-COPY ./statis /static
 
 
 # RUN apk update && apk add --no-cache build-base 
