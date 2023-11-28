@@ -10,6 +10,7 @@ COPY ./score.py /score.py
 COPY ./utils.py /utils.py
 COPY ./resources/scores.txt /resources/scores.txt
 COPY ./resources/requirements.txt requirements.txt
+COPY ./statis /static
 
 
 # RUN apk update && apk add --no-cache build-base 
