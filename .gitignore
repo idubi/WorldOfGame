@@ -13,9 +13,11 @@ __pycache__
 .history
 *Venv*
 *__*
-/chromedriver*
+/chromedriver*/
 jenkins/jenkins-data/
 *.zip*
 *.jar
 /gitignore/
 start.sh
+chrome/
+
