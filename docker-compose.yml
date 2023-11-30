@@ -3,7 +3,7 @@ services:
   scores-srv:
     build: .
     ports:
-      - 8777:30000
+      - 8777:8777
     depends_on:
       - scores-db
   scores-db:

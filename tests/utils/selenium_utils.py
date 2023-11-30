@@ -9,12 +9,7 @@ from selenium.webdriver.remote.webelement import WebElement
 from utils.logger import get_logger
 import time 
 
-# WEB_DRIVER_PATH = '~/Downloads/chromedriver'
-# WEB_DRIVER_PATH_CHROME = 'D:\\projects\\DevopsCourse\\venv\\chromium\\chromedriver.exe'
-# FIREFOX_PATH = 'C:\\Program Files\\Mozilla Firefox\\firefox.exe'
-#FIREFOX_PATH ='/Applications/Firefox.app/Contents/MacOS/firefox-bin'
-#WEB_DRIVER_PATH_CHROME = '/Users/idubim/chromedriver_mac_arm64/chromedriver'
-WEB_DRIVER_PATH_CHROME = './tests/chromedriver-win64/chromedriver.exe'
+WEB_DRIVER_PATH_CHROME = './resources/selenium/chromedriver-win64/chromedriver.exe'
  
 def get_selenium_driver(browser_type,flag_disable_extensions = False):
     try:

@@ -1,7 +1,6 @@
 node_modules
 /venv/
 /node_modules/
-*.exe
 .idea
 Pillow*
 .git
@@ -13,8 +12,11 @@ __pycache__
 .history
 *Venv*
 *__*
-/chromedriver*
+/chromedriver*/
 jenkins/jenkins-data/
 *.zip*
 *.jar
 /gitignore/
+start.sh
+chrome/
+

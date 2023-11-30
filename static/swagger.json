@@ -1,0 +1,46 @@
+{
+    "swagger": "2.0",
+    "info": {
+      "title": "Access API",
+      "version": "1.0.0"
+    },
+    "paths": {
+      "/score": {
+        "get": {
+          "description": "Returns table with all scores of all competitors",
+          "produces": [
+            "text/html"
+          ],
+          "responses": {
+            "200": {
+              "description": "Successful operation"
+            }
+          }    
+        }
+      },
+      "/score?user_name": {
+        "get": {
+          "description": "Returns text with username scores , if user exists ",
+          "produces": [
+            "text/html"
+          ],
+          "parameters":[{
+            "name" :"user_name" ,
+            "in" : "query",
+            "description": "The username to retrieve scores content for",
+            "required": true,
+            "type": "string" 
+          }],
+          "responses": {
+            "200": {
+              "description": "HTML content retrieved successfully",
+              "schema": {
+                "type": "string"
+              }
+           }    
+        }
+      },
+
+    }
+  }
+}

@@ -3,8 +3,9 @@ FROM python:3.12-alpine
 
 WORKDIR /
 # Copy all your Python application files into the container
-COPY ./server  /server
+COPY ./server /server
 COPY ./const /const
+COPY ./static /static
 COPY ./app.py /app.py 
 COPY ./score.py /score.py
 COPY ./utils.py /utils.py
@@ -26,7 +27,7 @@ RUN ln -s /resources/scores.txt  /scores.txt
 
 # Expose the port on which Flask server will run
 # I had tried this but once I set it , I get this ERR_EMPTY_RESPONSE when calling to the docker port
-# EXPOSE 8777
+EXPOSE 8777
 
 # Start the Flask server (modify the command as per your application)
 CMD ["python", "app.py"]
