@@ -84,16 +84,15 @@ properties([  githubProjectProperty(displayName: 'deploy world of game after pul
                             steps   {
                                     powershell("""
                                         .\\jenkins\\docker-commands\\dockerhub-push.ps1
-                                    """)
+                                    """)                            
                                 }    
                         }
+                    } 
                     post{
                         allways('logout from dockerhub') {
-                            steps {
                                 script {
                                     sh '\\jenkins\\docker-commands\\dockerhub-logout.sh'
                                     }
-                                }
                             }
                         }   
                 }
