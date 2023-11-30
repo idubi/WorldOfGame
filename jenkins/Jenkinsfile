@@ -1,0 +1,99 @@
+properties([  githubProjectProperty(displayName: 'deploy world of game after pull request - ci part (checkout , build a docker image, and test)', 
+                                    projectUrlStr: 'https://github.com/idubi/WorldOfGame/'), 
+              
+              ])
+                pipeline {
+                    agent  {
+                                    label "win-agent"
+                    }                                   
+                    options {
+                        buildDiscarder(logRotator(numToKeepStr: '5'))
+                    }
+                    environment {
+                        DOCKERHUB_CREDENTIALS = credentials('idubi_dockerhub')
+                    }                
+                    stages {
+                        stage('Clean Workspace') {
+                            steps {
+                                cleanWs()
+                            }
+                        }
+                        stage('Checkout from github') {
+                            steps {
+                                checkout([
+                                    $class: 'GitSCM', 
+                                    branches: [[name: "*/jenkins"]], 
+                                    userRemoteConfigs: [[
+                                        url: 'https://github.com/idubi/WorldOfGame/',
+                                        credentialsId: 'idubi_github'
+                                    ]]
+                                ])
+                            }
+                        }
+                        stage('delete old docker container and image if existst') {
+                            steps {
+                                powershell("""
+                                    .\\jenkins\\docker-commands\\remove-wow-image.ps1
+                                """)
+                            }
+                        }
+                        stage('Build Docker Image') {
+                            steps {
+                                script {
+                                    // Navigate to the directory containing your Dockerfile
+                                    dir('.') {
+                                        // Build a Docker image using the Dockerfile
+                                        bat 'docker build -t world-of-games .'
+                                    }
+                                }
+                            }
+                        }
+                        stage('Run Docker Container') {
+                            steps {
+                            
+                                script {
+                                    // Run a Docker container from the previously built image
+                                    bat 'docker run -d -p 8777:8777 --name wow-app world-of-games'
+                                }
+                            }
+                        }
+                            // stage('prepare for e2e test - install webdriver ') {
+                            //     steps {
+                            //         script {
+                            //             // Run a Docker container from the previously built image
+                            //             bat 'resources\\selenium\\chromedriver-win64\\chromedriver.exe'
+                            //             }
+                            //     }
+                            // }
+                        stage('E2E test on exported port') {
+                            steps {
+                                script {
+                                    bat 'pip install selenium'
+                                    bat 'python ./tests/E2E_Score_Unites.py'
+                                }
+                            }
+                        }
+                        stage('login to dockerhub') {
+                            steps   {
+                                    powershell("""
+                                        .\\jenkins\\docker-commands\\dockerhub-login.ps1
+                                    """)
+                                }    
+                        }
+                        stage('push to dockerhub') {
+                            steps   {
+                                    powershell("""
+                                        .\\jenkins\\docker-commands\\dockerhub-push.ps1
+                                    """)
+                                }    
+                        }
+                    post{
+                        allways('logout from dockerhub') {
+                            steps {
+                                script {
+                                    sh '\\jenkins\\docker-commands\\dockerhub-logout.sh'
+                                    }
+                                }
+                            }
+                        }   
+                }
