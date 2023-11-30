@@ -89,7 +89,7 @@ properties([  githubProjectProperty(displayName: 'deploy world of game after pul
                         }
                     } 
                     post{
-                        allways('logout from dockerhub') {
+                        always('logout from dockerhub') {
                                 script {
                                     sh '\\jenkins\\docker-commands\\dockerhub-logout.sh'
                                     }
