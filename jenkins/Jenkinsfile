@@ -73,13 +73,24 @@ properties([  githubProjectProperty(displayName: 'deploy world of game after pul
                                 }
                             }
                         }
-                        stage('login to dockerhub') {
+                       stage('login to dockerhub') {
                             steps   {
+                                
                                     powershell("""
-                                        .\\jenkins\\docker-commands\\dockerhub-login.ps1
-                                    """)
+                                                # this 2 solutions raise a warning to avoid insecure environment . 
+                                                #   --> however : sicne this is executed inside own computer or insid DMZ behind firewall 
+                                                #       this is good for my needs. 
+                                                #       in linux I would use --password-stdin and use 1 quoteted mark for groovy interpulation 
+                                                #       for more security , but this is not the case. 
+                                                #   --> we use powershall for environmental restricrtions
+                                                #   
+                                                #'echo DOCKERHUB_CREDENTIALS_PSW | docker login -u $DOCKERHUB_CREDENTIALS_USR'
+                                                docker login -u $DOCKERHUB_CREDENTIALS_USR -p $DOCKERHUB_CREDENTIALS_PSW 
+                                            """)
+                            
+                                
                                 }    
-                        }
+        }
                         stage('push to dockerhub') {
                             steps   {
                                     powershell("""
@@ -89,10 +100,10 @@ properties([  githubProjectProperty(displayName: 'deploy world of game after pul
                         }
                     } 
                     post{
-                        allways('logout from dockerhub') {
-                                script {
-                                    sh '\\jenkins\\docker-commands\\dockerhub-logout.sh'
-                                    }
+                        always('logout from dockerhub') {
+                                   powershell("""
+                                        docker logout
+                                    """)      
                             }
                         }   
                 }
