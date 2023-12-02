@@ -99,7 +99,7 @@ docker run -d -p 8080:8080 -p 8000:80 -p 50000:50000 -p 443:443 \
 
 
 
-docker tag world-of-games idubi/world-of-games:28112023
+docker tag-of-games idubi/world-of-games:28112023
 docker push idubi/world-of-games:28112023
 docker login -u idubi -p HAnt1989
 docker logout 
