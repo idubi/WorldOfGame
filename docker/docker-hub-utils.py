@@ -173,12 +173,12 @@ def push_docker_repo_to_hub(repo_name , user , password,build_incremental_type,n
             if create_docker_image_tag_for_push(user,repo_name,control_obj["next_tag_name"]):
                 return delete_old_images(user,repo_name,control_obj) 
             else:
-                return False 
+                return 1
         else:
-            return False
+            return 1
     except Exception as E:
         print (f'failed to push repo to docker hub ({type(E)} \n {E.args}) \n {E} ')
-        return False
+        return 1
         
 
  
