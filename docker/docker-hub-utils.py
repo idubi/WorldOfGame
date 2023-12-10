@@ -157,15 +157,16 @@ def delete_old_images(user,repo_name,control_obj):
            print (f'{tag_name} deleted successfuly ')
            
     if failed_list:
-        print (f'faile to delete old builds, details :  \n {failed_list}')
-        return False
+        raise Exception (f'faile to delete old builds, details :  \n {failed_list}')
+        
     else :
         return True
        
     
-
+#  if I use try catch then jenkins does not recignize failure , so I removed it
+# Itried with returning 1 or -1 but did not succeed 
 def push_docker_repo_to_hub(repo_name , user , password,build_incremental_type,number_builds_2keep) : 
-    try:
+    # try:
         if login_to_docker(user=user,password=password):    
             repository_obj = get_repo_tags_json(repo_name,user)
             repository_tags_obj = parse_json_to_tags_list(repository_obj)
@@ -173,12 +174,13 @@ def push_docker_repo_to_hub(repo_name , user , password,build_incremental_type,n
             if create_docker_image_tag_for_push(user,repo_name,control_obj["next_tag_name"]):
                 return delete_old_images(user,repo_name,control_obj) 
             else:
-                return False
+                raise Exception ('')
         else:
-            return False
-    except Exception as E:
-        print (f'failed to push repo to docker hub ({type(E)} \n {E.args}) \n {E} ')
-        return 1
+            raise Exception ('failed to login to dockerhub with {user} ' )
+    # except Exception as E:
+    #     print (f'failed to push repo to docker hub ({type(E)} \n {E.args}) \n {E} ')
+    #     raise Exception (E)
+        
         
 
  
