@@ -43,7 +43,7 @@ properties([  githubProjectProperty(displayName: 'deploy world of game after pul
                                     // Navigate to the directory containing your Dockerfile
                                     dir('.') {
                                         // Build a Docker image using the Dockerfile
-                                        bat 'docker build -t world-of-games .'
+                                        sh 'docker build -t world-of-games .'
                                     }
                                 }
                             }
@@ -53,7 +53,7 @@ properties([  githubProjectProperty(displayName: 'deploy world of game after pul
                             
                                 script {
                                     // Run a Docker container from the previously built image
-                                    bat 'docker run -d -p 8777:8777 --name wow-app world-of-games'
+                                    sh 'docker run -d -p 8777:8777 --name wow-app world-of-games'
                                 }
                             }
                         }
@@ -68,7 +68,7 @@ properties([  githubProjectProperty(displayName: 'deploy world of game after pul
                         stage('E2E test on exported port') {
                             steps {
                                 script {
-                                    bat 'python ./tests/E2E_Score_Unites.py'
+                                    sh 'python ./tests/E2E_Score_Unites.py'
                                 }
                             }
                         }
@@ -92,7 +92,7 @@ properties([  githubProjectProperty(displayName: 'deploy world of game after pul
         }
                         stage('push to dockerhub') {
                             steps   {
-                                    bat('python ./docker/docker-hub-utils.py $DOCKERHUB_CREDENTIALS_USR $DOCKERHUB_CREDENTIALS_PSW world-of-games BUILD 4')
+                                    sh 'python ./docker/docker-hub-utils.py $DOCKERHUB_CREDENTIALS_USR $DOCKERHUB_CREDENTIALS_PSW world-of-games BUILD 4'
                                 }    
                         }
                     } 
