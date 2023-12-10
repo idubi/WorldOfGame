@@ -139,7 +139,7 @@ def create_docker_image_tag_for_push(user,repo_name,tag) :
         return True
     else: 
         print (f'failed to push {tag_name} , error is {pushed_image.stderr.decode()}')
-        return False
+        raise Exception (pushed_image.stderr.decode())
     
 
     
@@ -178,7 +178,8 @@ def push_docker_repo_to_hub(repo_name , user , password,build_incremental_type,n
             return False
     except Exception as E:
         print (f'failed to push repo to docker hub ({type(E)} \n {E.args}) \n {E} ')
-        return False
+        # raise Exception (E)
+        return '1'
         
 
  
