@@ -68,7 +68,6 @@ properties([  githubProjectProperty(displayName: 'deploy world of game after pul
                         stage('E2E test on exported port') {
                             steps {
                                 script {
-                                    // bat 'pip install selenium'
                                     bat 'python ./tests/E2E_Score_Unites.py'
                                 }
                             }
