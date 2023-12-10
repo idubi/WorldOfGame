@@ -72,7 +72,7 @@ curl http://host.docker.internal:2375/version
 
 
 
-docker build -t jenkins-with-docker -f ./docker/Dokerfile-jenkins-with-docker . 
+
 
 
  
@@ -82,8 +82,18 @@ docker run -d -p 8080:8080  -p 8000:80 -p 50000:50000 -p443:443 --name jenkins -
 docker run -it --privileged --name dind -d docker:dind
 
 
+wow/resources>   docker build -t dindjenkins -f ./docker/Dockerfile-dind-agent .
+docker run -it --privileged --name dindj -d dindjenkins sleep infinity
+docker run -it --privileged --name dindj -d dindjenkins while true; do sleep ; done
+docker run -it --privileged --name dindj -d dindjenkins while true do sleep  done
+
+
+docker exec -it dind rc-service local restart 
+
+
 docker volume create genkins-vol
 
+ 
 
 docker run -d -p 8080:8080 -p 8000:80 -p 50000:50000 -p 443:443 --name jenkins \
 --network jenkins-network --volume "D:\projects\WorldOfGame\jenkins\jenkins-data":/bitnami/jenkins \
@@ -98,8 +108,12 @@ docker run -d -p 8080:8080 -p 8000:80 -p 50000:50000 -p 443:443 \
 
 
 
-
-docker tag-of-games idubi/world-of-games:28112023
-docker push idubi/world-of-games:28112023
 docker login -u idubi -p HAnt1989
+docker  tag world-of-games idubi/world-of-games:4.1.02
+docker push idubi/world-of-games:4.1.02
 docker logout 
+
+apk update
+apk add openrc
+rc-update add jenkins-agent default
+rc-service local start

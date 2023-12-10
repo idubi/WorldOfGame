@@ -1,14 +1,18 @@
 FROM docker:dind
 WORKDIR /
-COPY ./jenkins /var/jenkins
-RUN apk add --no-cache python3 && \
-    python3 -m ensurepip && \
-    pip3 install --upgrade pip
-RUN pip install --upgrade pip
-RUN apk add nginx
+COPY ./jenkins/start-agent.sh /var/jenkins-agent/start-agent.sh
+# RUN apk add --no-cache python3 && \
+#     python3 -m ensurepip && \
+#     pip3 install --upgrade pip 
+# RUN pip install --upgrade pip
+# RUN apk update
+# RUN apk add nginx
 RUN apk add curl 
-RUN "chmod 777 -R /var/jenkins"
-CMD [ "/var/jenkins/start-agent.sh" ]
+RUN apk add openjdk11
+RUN apk add git
+CMD "chmod 777 -R /var/jenkins-agent" 
+ENTRYPOINT [ "/var/jenkins-agent/start-agent.sh" ]
+
 
 
 
