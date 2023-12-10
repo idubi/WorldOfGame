@@ -4,3 +4,7 @@ python-bidi==0.4.2
 requests==2.31.0
 selenium
 flask_swagger_ui
+sys
+requests
+json
+subprocess
