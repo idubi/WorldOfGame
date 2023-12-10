@@ -178,7 +178,7 @@ def push_docker_repo_to_hub(repo_name , user , password,build_incremental_type,n
             return False
     except Exception as E:
         print (f'failed to push repo to docker hub ({type(E)} \n {E.args}) \n {E} ')
-        return False
+        return 1
         
 
  
