@@ -93,10 +93,7 @@ properties([  githubProjectProperty(displayName: 'deploy world of game after pul
         }
                         stage('push to dockerhub') {
                             steps   {
-                                    // powershell("""
-                                    //     .\\jenkins\\docker-commands\\dockerhub-push.ps1 --usr=$DOCKERHUB_CREDENTIALS_USR --pass=$DOCKERHUB_CREDENTIALS_PSW 
-                                    // """)                            
-                                    bat('python ./docker/s')
+                                    bat("python ./docker/docker-hub-utils.py $DOCKERHUB_CREDENTIALS_USR $DOCKERHUB_CREDENTIALS_PSW world-of-games BUILD 4")
                                 }    
                         }
                     } 
