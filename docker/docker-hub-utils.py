@@ -77,19 +77,15 @@ def api_delete_tag_name(user,repo_name,token,tag_name):
             
     
 def login_to_docker(password,user): 
-    try :
         response = api_login( password=password,user=user)
         
         if response.status_code == 200:
             DOCKER_RESPONSE['TOKEN'] = response.json()['token']
-            print('success !!! connected to docker hub') 
+            print('connected to docker hub ') 
             return True
         else:
             print(f'faile to login to docker hub , status : {response.status_code} , {response["detail"]}')
             return False
-    except Exception as E:
-        print (f'failed to login to docker hub ({type(E)} \n {E.args}) \n {E} ')
-        return False
 
 def get_repo_tags_json(repo_name , user)  :
      token = DOCKER_RESPONSE["TOKEN"]
@@ -136,16 +132,13 @@ def get_next_tagname_and_tags_2delete(repository_tags,build_incremental_type,num
 
 def create_docker_image_tag_for_push(user,repo_name,tag) :
     tag_name = f'{user}/{repo_name}:{tag}'
-    try:
-        subprocess.run (f'docker tag {repo_name} {tag_name}',shell=True,capture_output=True,text=True,check=True)
-        pushed_image = subprocess.run (f'docker push {tag_name}',shell=True,capture_output=True)
-        if pushed_image.returncode == 0:
-            print(f'{tag_name} was pushed to repository {user}/{repo_name}')
-            return True
-        else: 
-            print (f'failed to push {tag_name} , error is {pushed_image.stderr.decode()}')
-            return False
-    except:
+    subprocess.run (f'docker tag {repo_name} {tag_name}',shell=True,capture_output=True,text=True,check=True)
+    pushed_image = subprocess.run (f'docker push {tag_name}',shell=True,capture_output=True)
+    if pushed_image.returncode == 0:
+        print(f'{tag_name} was pushed to repository {user}/{repo_name}')
+        return True
+    else: 
+        print (f'failed to push {tag_name} , error is {pushed_image.stderr.decode()}')
         return False
     
 
@@ -171,23 +164,28 @@ def delete_old_images(user,repo_name,control_obj):
        
     
 
-def build_docker_container(repo_name , user , password,build_incremental_type,number_builds_2keep) : 
-    if login_to_docker(user=user,password=password):    
-        repository_obj = get_repo_tags_json(repo_name,user)
-        repository_tags_obj = parse_json_to_tags_list(repository_obj)
-        control_obj = get_next_tagname_and_tags_2delete(repository_tags_obj,build_incremental_type,int(number_builds_2keep))
-        if create_docker_image_tag_for_push(user,repo_name,control_obj["next_tag_name"]):
-            return delete_old_images(user,repo_name,control_obj) 
+def push_docker_repo_to_hub(repo_name , user , password,build_incremental_type,number_builds_2keep) : 
+    try:
+        if login_to_docker(user=user,password=password):    
+            repository_obj = get_repo_tags_json(repo_name,user)
+            repository_tags_obj = parse_json_to_tags_list(repository_obj)
+            control_obj = get_next_tagname_and_tags_2delete(repository_tags_obj,build_incremental_type,int(number_builds_2keep))
+            if create_docker_image_tag_for_push(user,repo_name,control_obj["next_tag_name"]):
+                return delete_old_images(user,repo_name,control_obj) 
+            else:
+                return False 
         else:
-            return False 
-    else:
+            return False
+    except Exception as E:
+        print (f'failed to push repo to docker hub ({type(E)} \n {E.args}) \n {E} ')
         return False
+        
 
  
-# if build_docker_container(user="idubi", password="dckr_pat_qf2cugkVszRwfktFzibi7Su6jD0" , repo_name="world-of-games"):
+# if push_docker_repo_to_hub(user="idubi", password="dckr_pat_qf2cugkVszRwfktFzibi7Su6jD0" , repo_name="world-of-games"):
 #     print (f'{DOCKER_RESPONSE}')
     
-# build_docker_container(user="idubi", password="dckr_pat_qf2cugkVszRwfktFzibi7Su6jD0" , 
+# push_docker_repo_to_hub(user="idubi", password="dckr_pat_qf2cugkVszRwfktFzibi7Su6jD0" , 
 #                         repo_name="world-of-games",
 #                         build_incremental_type="RELEASE",
 #                         number_builds_2keep=5)
@@ -206,10 +204,10 @@ def build_docker_container(repo_name , user , password,build_incremental_type,nu
 
 
     
-# build_docker_container(user="idubi", password="dckr_pat_qf2cugkVszRwfktFzibi7Su6jD0" , 
+# push_docker_repo_to_hub(user="idubi", password="dckr_pat_qf2cugkVszRwfktFzibi7Su6jD0" , 
 #                         repo_name="world-of-games",
 #                         build_incremental_type="RELEASE",
 #                         number_builds_2keep=1)
 arg = sys.argv
 
-build_docker_container(user=arg[1] , password=arg[2] , repo_name=arg[3] , build_incremental_type=arg[4], number_builds_2keep=arg[5])
+push_docker_repo_to_hub(user=arg[1] , password=arg[2] , repo_name=arg[3] , build_incremental_type=arg[4], number_builds_2keep=arg[5])
