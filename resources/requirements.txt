@@ -1,7 +1,6 @@
 Flask==2.3.2
 Flask-Cors==3.0.10
 python-bidi==0.4.2
-requests==2.31.0
 selenium==4.15.2
 flask_swagger_ui
 requests==2.31.0
