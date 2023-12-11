@@ -114,7 +114,7 @@ def evaluate_tag_name(tag_name) :
     tag_elements = tag_name.split('.')
     tag_elements.reverse() 
     value = sum(int(element) * (10000) ** i for i, element in enumerate(tag_elements))
-    print(f'evaluating {tag_name} ==> {value}')
+    # print(f'evaluating {tag_name} ==> {value}')
     return value
     
 
