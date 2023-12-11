@@ -33,7 +33,9 @@ def get_docker_delete_tag_url(user,repo_name,tag_name):
 
 
 def get_latest_build_tag(tags_object):
-    return max(tags_object, key=lambda x: int(x['tag_name'].replace('.','')))['tag_name']
+    return max(tags_object, key=lambda x: evaluate_tag_name(x['tag_name']))['tag_name']
+    # return max(tags_object, key=lambda x: int(x['tag_name'].replace('.','')))['tag_name']
+ 
 
 def increase_build_tag(current_buildnumber,incremental_type):
     build_number_array = current_buildnumber[::1].split('.')
