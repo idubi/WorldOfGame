@@ -123,7 +123,7 @@ def get_list_of_tags_to_delete(repository_tags,number_builds_2keeep):
         return []
     else :
         sorted_list = sorted(repository_tags, key=lambda x: evaluate_tag_name(x['tag_name']))
-        return sorted_list[:len(repository_tags)-number_builds_2keeep]
+        return sorted_list[:len(repository_tags)-number_builds_2keeep+1]
     
 
 def get_next_tagname_and_tags_2delete(repository_tags,build_incremental_type,number_builds_2keep):
