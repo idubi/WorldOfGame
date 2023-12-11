@@ -113,7 +113,7 @@ def parse_json_to_tags_list(repo_json):
 def evaluate_tag_name(tag_name) : 
     tag_elements = tag_name.split('.')
     tag_elements.reverse() 
-    value = sum(int(element) * (1000) ** i for i, element in enumerate(tag_elements))
+    value = sum(int(element) * (10000) ** i for i, element in enumerate(tag_elements))
     # print(f'evaluating {tag_name} ==> {value}')
     return value
     
