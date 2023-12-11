@@ -113,7 +113,7 @@ def parse_json_to_tags_list(repo_json):
 def evaluate_tag_name(tag_name) : 
     tag_elements = tag_name.split('.')
     tag_elements.reverse() 
-    value = sum(int(element) * 10 ** i for i, element in enumerate(tag_elements))
+    value = sum(int(element) * (1000) ** i for i, element in enumerate(tag_elements))
     # print(f'evaluating {tag_name} ==> {value}')
     return value
     
@@ -205,6 +205,7 @@ def push_docker_repo_to_hub(repo_name , user , password,build_incremental_type,n
 # increase_build_tag("0.0.0","BUILD")
 # increase_build_tag("0.0.9","BUILD")
 # increase_build_tag("0.10.10","BUILD")
+
 
 
     
