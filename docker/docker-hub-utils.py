@@ -206,12 +206,14 @@ def push_docker_repo_to_hub(repo_name , user , password,build_incremental_type,n
 # if push_docker_repo_to_hub(user="idubi", password="dckr_pat_qf2cugkVszRwfktFzibi7Su6jD0" , repo_name="world-of-games"):
 #     print (f'{DOCKER_RESPONSE}')
     
+# TO_DO_LEVEL-5:
 # push_docker_repo_to_hub(user="idubi", password="dckr_pat_qf2cugkVszRwfktFzibi7Su6jD0" , 
 #                         repo_name="world-of-games",
 #                         build_incremental_type="RELEASE",
 #                         number_builds_2keep=5)
-
-
+        
+# TO_DO_LEVEL-5:
+# will be in next tests (nect assignment to add tests)
 # increase_build_tag("35.0.1","VERSION")
 # increase_build_tag("3.40.0","VERSION")
 # increase_build_tag("10.4.0","VERSION")
@@ -224,12 +226,13 @@ def push_docker_repo_to_hub(repo_name , user , password,build_incremental_type,n
 # increase_build_tag("0.10.10","BUILD")
 
 
-
-    
+# TO_DO_LEVEL-5:
+# wil lbe added to next tests (next assignment to add tests)    
 # push_docker_repo_to_hub(user="idubi", password="dckr_pat_qf2cugkVszRwfktFzibi7Su6jD0" , 
 #                         repo_name="world-of-games",
 #                         build_incremental_type="RELEASE",
 #                         number_builds_2keep=1)
 arg = sys.argv
 
+# this file is executed with this parameters from jenklins , also a debug file exist with execution params
 push_docker_repo_to_hub(user=arg[1] , password=arg[2] , repo_name=arg[3] , build_incremental_type=arg[4], number_builds_2keep=arg[5])
