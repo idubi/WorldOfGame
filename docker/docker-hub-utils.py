@@ -93,12 +93,7 @@ def get_repo_tags_json(repo_name , user)  :
      token = DOCKER_RESPONSE["TOKEN"]
      if (token):
         response = api_get_repo_list(repo_name , user , token)
-        tags_list = response.json()
-        # dont coutn latest in the list since we need to remove it if exists anyway
-        tags_list = list(filter(lambda item: item.get('tag_name') != "latest", tags_list))
-        return tags_list
-    
-        
+        return response.json()
      else:
         print('error : docker response [TOKEN] have no value')  
         return {}
@@ -112,6 +107,7 @@ def parse_json_to_tags_list(repo_json):
         "tag_name":item["name"]
     }
     for item in repo_json["results"]
+    if item["name"] != "latest"
     ]
     return  result_list
 
