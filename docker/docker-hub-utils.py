@@ -93,7 +93,12 @@ def get_repo_tags_json(repo_name , user)  :
      token = DOCKER_RESPONSE["TOKEN"]
      if (token):
         response = api_get_repo_list(repo_name , user , token)
-        return response.json()
+        tags_list = response.json()
+        # dont coutn latest in the list since we need to remove it if exists anyway
+        tags_list = list(filter(lambda item: item.get('tag_name') != "latest", tags_list))
+        return tags_list
+    
+        
      else:
         print('error : docker response [TOKEN] have no value')  
         return {}
@@ -118,12 +123,12 @@ def evaluate_tag_name(tag_name) :
     return value
     
 
-def get_list_of_tags_to_delete(repository_tags,number_builds_2keeep):
-    if len(repository_tags) < number_builds_2keeep - 1 :
+def get_list_of_tags_to_delete(repository_tags,number_builds_2keep):
+    if len(repository_tags) < number_builds_2keep - 1 :
         return []
     else :
         sorted_list = sorted(repository_tags, key=lambda x: evaluate_tag_name(x['tag_name']))
-        return sorted_list[:len(repository_tags)-number_builds_2keeep+1]
+        return sorted_list[:len(repository_tags)-number_builds_2keep+1]
     
 
 def get_next_tagname_and_tags_2delete(repository_tags,build_incremental_type,number_builds_2keep):
@@ -135,7 +140,8 @@ def get_next_tagname_and_tags_2delete(repository_tags,build_incremental_type,num
 def create_docker_image_tag_for_push(user,repo_name,tag) :
     tag_name = f'{user}/{repo_name}:{tag}'
     tag_name_lts = f'{user}/{repo_name}:latest'
-    subprocess.run (f'docker tag {repo_name} {tag_name} {tag_name_lts} ',shell=True,capture_output=True,text=True,check=True)
+    subprocess.run (f'docker tag {repo_name} {tag_name} ',shell=True,capture_output=True,text=True,check=True)
+    subprocess.run (f'docker tag {repo_name} {tag_name_lts} ',shell=True,capture_output=True,text=True,check=True)
     pushed_image = subprocess.run (f'docker push {tag_name}',shell=True,capture_output=True)
     if pushed_image.returncode == 0:
         print(f'{tag_name} was pushed to repository {user}/{repo_name}')
@@ -143,7 +149,6 @@ def create_docker_image_tag_for_push(user,repo_name,tag) :
     else: 
         print (f'failed to push {tag_name} , error is {pushed_image.stderr.decode()}')
         raise Exception (pushed_image.stderr.decode())
-    
 
     
 def delete_old_images(user,repo_name,control_obj):
@@ -163,6 +168,12 @@ def delete_old_images(user,repo_name,control_obj):
         raise Exception (f'faile to delete old builds, details :  \n {failed_list}')
         
     else :
+        #  try to delete "latest" tag name id exist , if not do nothing
+        try:
+            api_delete_tag_name(user,repo_name,token,"latest")
+        except: 
+            pass
+            # print("no latest tag name to delete")
         return True
        
     
