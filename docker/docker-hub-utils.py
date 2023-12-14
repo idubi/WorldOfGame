@@ -139,6 +139,7 @@ def create_docker_image_tag_for_push(user,repo_name,tag) :
     subprocess.run (f'docker tag {repo_name} {tag_name} ',shell=True,capture_output=True,text=True,check=True)
     subprocess.run (f'docker tag {repo_name} {tag_name_lts} ',shell=True,capture_output=True,text=True,check=True)
     pushed_image = subprocess.run (f'docker push {tag_name}',shell=True,capture_output=True)
+    pushed_image = subprocess.run (f'docker push {tag_name_lts}',shell=True,capture_output=True)
     if pushed_image.returncode == 0:
         print(f'{tag_name} was pushed to repository {user}/{repo_name}')
         return True
