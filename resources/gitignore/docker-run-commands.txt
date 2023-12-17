@@ -105,3 +105,7 @@ curl -sO http://host.docker.internal:8080/jnlpJars/agent.jar;java -jar agent.jar
 
 
 /host.docker.internal
+
+
+curl.exe -sO http://localhost:8080/jnlpJars/agent.jar
+java -jar agent.jar -url http://localhost:8080/ -secret 662069054a25e40cb0e83bc2af14418a2b4e3978296604d3cae07250e13c3741 -name "win-agent" -workDir "d:\jenkins_agent_executions\win-agent"
