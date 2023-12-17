@@ -1,0 +1,58 @@
+commit 1d5e4e6b80644c03d6ad2c58300402c941262362
+tree ccce9f619aecb1c07d84053ced8f9cdb78d6ac9e
+parent 4bd1b7f824fe1232c8e6a4f08e8b5e5cd74dbbe1
+author idubi <ido.bistry@gmail.com> 2023-12-01 01:41:52 +0200
+committer idubi <ido.bistry@gmail.com> 2023-12-01 01:41:52 +0200
+
+    typo always
+
+
+:100644 100644 967d865febd679c033d4be8f5c2f941a409789b1 cd130be5443d37ffe7469b47c24fb5b41a5dc908 M	jenkins/Jenkinsfile
+commit 4bd1b7f824fe1232c8e6a4f08e8b5e5cd74dbbe1
+tree 166bdeef59d1b04bda28e8fb3046d343cb66619c
+parent a17036b1ccfdb04211bfb095f0e3247d5f384af1
+author idubi <ido.bistry@gmail.com> 2023-11-30 18:16:39 +0200
+committer idubi <ido.bistry@gmail.com> 2023-11-30 18:16:39 +0200
+
+    fix jenkinsfile
+
+
+:100644 100644 271f80531f1bda98187b166c5b9e97d44be9a01b 967d865febd679c033d4be8f5c2f941a409789b1 M	jenkins/Jenkinsfile
+commit a17036b1ccfdb04211bfb095f0e3247d5f384af1
+tree 03a12724985bbce1b04f3415ad91d22ba8ceaf92
+parent 6449804adedabe600b1f3a5fb8cd2bf0b8e046cf
+author idubi <ido.bistry@gmail.com> 2023-11-30 18:09:56 +0200
+committer idubi <ido.bistry@gmail.com> 2023-11-30 18:09:56 +0200
+
+    rename jenkinsfile
+
+
+:000000 100644 0000000000000000000000000000000000000000 271f80531f1bda98187b166c5b9e97d44be9a01b A	jenkins/Jenkinsfile
+:100644 000000 7871304ab995ca7b1397f3e1ec5113ade544d50a 0000000000000000000000000000000000000000 D	jenkins/checkout.Jenkinsfile
+commit 6449804adedabe600b1f3a5fb8cd2bf0b8e046cf
+tree a3fe41bf6caf4d41845ab2a7c40198207feb4dcb
+parent 65cde2b49bb826aaea4a10245b5191ceb92d1634
+author idubi <ido.bistry@gmail.com> 2023-11-30 17:40:14 +0200
+committer idubi <ido.bistry@gmail.com> 2023-11-30 17:40:14 +0200
+
+    adding steps to dockerhub - prepare for dev
+
+
+:000000 100644 0000000000000000000000000000000000000000 f523a59d20f7010a56026a6c2e9c923a1dbef761 A	.groovylintrc.json
+:100644 000000 2ca49e9cca56c6b72caff29f28f99aaaedefc5be 0000000000000000000000000000000000000000 D	docker/dcoker_config-credentials.cp1
+:100644 100644 3ef40c018e22211b1a684edd41fcd2c8262c65b0 00606cec6bec2f312d27fa748797093b319ed608 R096	docker/gitignore/docker-run-commands.txt	docker/dockerHun-commands.txt
+:100644 100644 dd8b4c304765d8d409dce80499ad614535aae3b9 dd8b4c304765d8d409dce80499ad614535aae3b9 R100	docker/upload_image.ps1	docker/gitignore/upload-image.ps1
+:100644 100644 ac96d78c3cf847f268f2940acfd4b3923c8ecb21 7871304ab995ca7b1397f3e1ec5113ade544d50a M	jenkins/checkout.Jenkinsfile
+:000000 100644 0000000000000000000000000000000000000000 e69de29bb2d1d6434b8b29ae775ad8c2e48c5391 A	jenkins/docker-commands/dockerhub-login.ps1
+:000000 100644 0000000000000000000000000000000000000000 e69de29bb2d1d6434b8b29ae775ad8c2e48c5391 A	jenkins/docker-commands/dockerhub-logout,ps1
+:000000 100644 0000000000000000000000000000000000000000 e69de29bb2d1d6434b8b29ae775ad8c2e48c5391 A	jenkins/docker-commands/dockerhub-push.ps1
+:100644 100644 b97703b270f21cc95cdafe33975370a19b713142 b97703b270f21cc95cdafe33975370a19b713142 R100	docker/remove-wow-image.ps1	jenkins/docker-commands/remove-wow-image.ps1
+commit 5568277139e97eaed9f43980c2d3942783c2f1a8
+tree e02253e055b9240360a78de4b0b5c88ab9bec24f
+parent c1f55c0d6b65169190e46d7290bbd9ef6a826916
+author idubi <ido.bistry@gmail.com> 2023-11-13 21:04:05 +0200
+committer GitHub <noreply@github.com> 2023-11-13 21:04:05 +0200
+
+    Create README.md
+
+:000000 100644 0000000000000000000000000000000000000000 d5edda62021834e725d03831b38b4c3e8bf40573 A	README.md

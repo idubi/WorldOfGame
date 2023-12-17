@@ -1,0 +1,11 @@
+commit 95c1842e0388ebe25563e3650e10bbbc23884228
+tree 61b0a177b95fd610961c40f75847f6e6086559b2
+parent 72c1c9b089e9a983f6139ccbf3bde90ac571dd2a
+author idubi <ido.bistry@gmail.com> 2023-12-14 09:00:27 +0200
+committer idubi <ido.bistry@gmail.com> 2023-12-14 09:00:27 +0200
+
+    push latest after delete old latest
+    add latest as const
+
+
+:100644 100644 26035a4e1f3cc1a9422beb00f0b0eca5172dda8b 4e262586564c4e896a11834924a487314a74a903 M	docker/docker-hub-utils.py

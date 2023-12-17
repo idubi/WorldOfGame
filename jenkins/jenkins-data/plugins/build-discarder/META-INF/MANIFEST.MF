@@ -1,0 +1,18 @@
+Manifest-Version: 1.0
+Created-By: Maven Archiver 3.6.0
+Build-Jdk-Spec: 11
+Specification-Title: Build Discarder Plugin
+Specification-Version: 0.0
+Implementation-Title: Build Discarder Plugin
+Implementation-Version: 139.v05696a_7fe240
+Group-Id: io.jenkins.plugins
+Short-Name: build-discarder
+Long-Name: Build Discarder Plugin
+Plugin-Version: 139.v05696a_7fe240
+Hudson-Version: 2.346.1
+Jenkins-Version: 2.346.1
+Plugin-Developers: Örjan Sjöholm:orjan:orjansjoholm@gmail.com
+Plugin-License-Name: MIT License
+Plugin-License-Url: http://opensource.org/licenses/MIT
+Plugin-ScmUrl: https://github.com/jenkinsci/build-discarder-plugin
+

@@ -1,0 +1,140 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<flow-definition plugin="workflow-job@1360.vc6700e3136f5">
+  <actions>
+    <org.jenkinsci.plugins.pipeline.modeldefinition.actions.DeclarativeJobAction plugin="pipeline-model-definition@2.2151.ve32c9d209a_3f"/>
+    <org.jenkinsci.plugins.pipeline.modeldefinition.actions.DeclarativeJobPropertyTrackerAction plugin="pipeline-model-definition@2.2151.ve32c9d209a_3f">
+      <jobProperties>
+        <string>jenkins.model.BuildDiscarderProperty</string>
+      </jobProperties>
+      <triggers/>
+      <parameters/>
+      <options/>
+    </org.jenkinsci.plugins.pipeline.modeldefinition.actions.DeclarativeJobPropertyTrackerAction>
+    <org.jenkinsci.plugins.workflow.multibranch.JobPropertyTrackerAction plugin="workflow-multibranch@756.v891d88f2cd46">
+      <jobPropertyDescriptors>
+        <string>com.coravy.hudson.plugins.github.GithubProjectProperty</string>
+      </jobPropertyDescriptors>
+    </org.jenkinsci.plugins.workflow.multibranch.JobPropertyTrackerAction>
+  </actions>
+  <description>test docker file execution</description>
+  <keepDependencies>false</keepDependencies>
+  <properties>
+    <jenkins.model.BuildDiscarderProperty>
+      <strategy class="hudson.tasks.LogRotator">
+        <daysToKeep>-1</daysToKeep>
+        <numToKeep>5</numToKeep>
+        <artifactDaysToKeep>-1</artifactDaysToKeep>
+        <artifactNumToKeep>-1</artifactNumToKeep>
+      </strategy>
+    </jenkins.model.BuildDiscarderProperty>
+    <com.coravy.hudson.plugins.github.GithubProjectProperty plugin="github@1.37.3.1">
+      <projectUrl>https://github.com/idubi/WorldOfGame/</projectUrl>
+      <displayName>deploy world of game after pull request - ci part (checkout , build a docker image, and test)</displayName>
+    </com.coravy.hudson.plugins.github.GithubProjectProperty>
+  </properties>
+  <definition class="org.jenkinsci.plugins.workflow.cps.CpsFlowDefinition" plugin="workflow-cps@3806.va_3a_6988277b_2">
+    <script>properties([  githubProjectProperty(displayName: &apos;deploy world of game after pull request - ci part (checkout , build a docker image, and test)&apos;, 
+                                    projectUrlStr: &apos;https://github.com/idubi/WorldOfGame/&apos;), 
+              
+              ])
+                pipeline {
+                    agent  {
+                                    label &quot;win-agent&quot;
+                    }                                   
+                    options {
+                        buildDiscarder(logRotator(numToKeepStr: &apos;5&apos;))
+                    }
+                    environment {
+                        DOCKERHUB_CREDENTIALS = credentials(&apos;idubi_dockerhub&apos;)
+                    }                
+                    stages {
+                        stage(&apos;Clean Workspace&apos;) {
+                            steps {
+                                cleanWs()
+                            }
+                        }
+                        stage(&apos;Checkout from github&apos;) {
+                            steps {
+                                checkout([
+                                    $class: &apos;GitSCM&apos;, 
+                                    branches: [[name: &quot;*/jenkins&quot;]], 
+                                    userRemoteConfigs: [[
+                                        url: &apos;https://github.com/idubi/WorldOfGame/&apos;,
+                                        credentialsId: &apos;idubi_github&apos;
+                                    ]]
+                                ])
+                            }
+                        }
+                        stage(&apos;delete old docker container and image if existst&apos;) {
+                            steps {
+                                powershell(&quot;&quot;&quot;
+                                    .\\jenkins\\docker-commands\\remove-wow-image.ps1
+                                &quot;&quot;&quot;)
+                            }
+                        }
+                        stage(&apos;Build Docker Image&apos;) {
+                            steps {
+                                script {
+                                    // Navigate to the directory containing your Dockerfile
+                                    dir(&apos;.&apos;) {
+                                        // Build a Docker image using the Dockerfile
+                                        bat &apos;docker build -t world-of-games .&apos;
+                                    }
+                                }
+                            }
+                        }
+                        stage(&apos;Run Docker Container&apos;) {
+                            steps {
+                            
+                                script {
+                                    // Run a Docker container from the previously built image
+                                    bat &apos;docker run -d -p 8777:8777 --name wow-app world-of-games&apos;
+                                }
+                            }
+                        }
+                            // stage(&apos;prepare for e2e test - install webdriver &apos;) {
+                            //     steps {
+                            //         script {
+                            //             // Run a Docker container from the previously built image
+                            //             bat &apos;resources\\selenium\\chromedriver-win64\\chromedriver.exe&apos;
+                            //             }
+                            //     }
+                            // }
+                        stage(&apos;E2E test on exported port&apos;) {
+                            steps {
+                                script {
+                                    bat &apos;pip install selenium&apos;
+                                    bat &apos;python ./tests/E2E_Score_Unites.py&apos;
+                                }
+                            }
+                        }
+                        stage(&apos;login to dockerhub&apos;) {
+                            steps   {
+                                //    bat &apos;echo %DOCKERHUB_CREDENTIALS_PSW% | docker login -u %DOCKERHUB_CREDENTIALS_USR% --password-stdin&apos;
+                                powershell(&quot;&quot;&quot;
+                                docker login -u dckr_pat_qf2cugkVszRwfktFzibi7Su6jD0 --password-stdin &lt;&lt;&lt; idubi
+                                &quot;&quot;&quot;)
+                                
+                                }    
+                        }
+                        stage(&apos;push to dockerhub&apos;) {
+                            steps   {
+                                    powershell(&quot;&quot;&quot;
+                                        .\\jenkins\\docker-commands\\dockerhub-push.ps1
+                                    &quot;&quot;&quot;)                            
+                                }    
+                        }
+                    } 
+                    post{
+                        always(&apos;logout from dockerhub&apos;) {
+                                   powershell(&quot;&quot;&quot;
+                                        docker logout
+                                    &quot;&quot;&quot;)      
+                            }
+                        }   
+                }</script>
+    <sandbox>true</sandbox>
+  </definition>
+  <triggers/>
+  <disabled>false</disabled>
+</flow-definition>

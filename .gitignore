@@ -13,7 +13,8 @@ __pycache__
 *Venv*
 *__*
 /chromedriver*/
-jenkins/jenkins-data/
+# jenkins/jenkins-data/
+jenkins-data.zip
 *.zip*
 *.jar
 /gitignore/

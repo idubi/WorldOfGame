@@ -1,0 +1,56 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<flow-definition plugin="workflow-job@1360.vc6700e3136f5">
+  <actions>
+    <org.jenkinsci.plugins.pipeline.modeldefinition.actions.DeclarativeJobAction plugin="pipeline-model-definition@2.2151.ve32c9d209a_3f"/>
+    <org.jenkinsci.plugins.pipeline.modeldefinition.actions.DeclarativeJobPropertyTrackerAction plugin="pipeline-model-definition@2.2151.ve32c9d209a_3f">
+      <jobProperties/>
+      <triggers/>
+      <parameters/>
+      <options/>
+    </org.jenkinsci.plugins.pipeline.modeldefinition.actions.DeclarativeJobPropertyTrackerAction>
+  </actions>
+  <description>test</description>
+  <keepDependencies>false</keepDependencies>
+  <properties/>
+  <definition class="org.jenkinsci.plugins.workflow.cps.CpsFlowDefinition" plugin="workflow-cps@3806.va_3a_6988277b_2">
+    <script>                pipeline {
+                    agent  {
+                                    label &quot;win-agent&quot;
+                    }                                   
+                    environment {
+                        DOCKERHUB_CREDENTIALS = credentials(&apos;idubi_dockerhub&apos;)
+                    }                
+                    stages {
+					  stage(&apos;login to dockerhub&apos;) {
+                            steps   {
+                                 
+                                    powershell(&quot;&quot;&quot;
+                                        # this 2 solutions raise a warning to avoid insecure environment . 
+                                        #   --&gt; however : sicne this is executed inside own computer or insid DMZ behind firewall 
+                                        #       this is good for my needs. 
+                                        #       in linux I would use --password-stdin and use 1 quoteted mark for groovy interpulation 
+                                        #       for more security , but this is not the case. 
+                                        #   --&gt; we use powershall for environmental restricrtions
+                                        #   
+                                        #&apos;echo DOCKERHUB_CREDENTIALS_PSW | docker login -u $DOCKERHUB_CREDENTIALS_USR&apos;
+                                        docker login -u $DOCKERHUB_CREDENTIALS_USR -p $DOCKERHUB_CREDENTIALS_PSW 
+                                    &quot;&quot;&quot;)
+                            
+                                
+                                }    
+                        }
+					}
+                 post{
+                        always(&apos;logout from dockerhub&apos;) {
+                                   powershell(&quot;&quot;&quot;
+                                      #  docker logout
+                                    &quot;&quot;&quot;)      
+                            }
+                        }   
+                }						
+					</script>
+    <sandbox>true</sandbox>
+  </definition>
+  <triggers/>
+  <disabled>false</disabled>
+</flow-definition>

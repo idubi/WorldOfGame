@@ -1,0 +1,2 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<l:dependencies xmlns:l='licenses' groupId='io.jenkins.plugins' artifactId='build-discarder' version='139.v05696a_7fe240'><l:dependency name='Build Discarder Plugin' groupId='io.jenkins.plugins' artifactId='build-discarder' version='139.v05696a_7fe240' url=''><l:description>Adds a global build discarder that's possible to override with a project specific discarder.</l:description><l:license name='MIT License' url='http://opensource.org/licenses/MIT'/></l:dependency></l:dependencies>

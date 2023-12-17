@@ -1,0 +1,13 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<fingerprint>
+  <timestamp>2023-11-30 23:42:35.125 UTC</timestamp>
+  <md5sum>0fe55144bffc7900c31a36f2f9071fd5</md5sum>
+  <fileName>Credential id=idubi_dockerhub name=idubi/****** (idubi dockerhub credentials)</fileName>
+  <usages>
+    <entry>
+      <string>world-of-games/deploy world-of-games</string>
+      <ranges>82-86</ranges>
+    </entry>
+  </usages>
+  <facets/>
+</fingerprint>

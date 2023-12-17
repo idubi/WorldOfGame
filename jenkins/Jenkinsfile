@@ -28,7 +28,7 @@ properties([  githubProjectProperty(displayName: 'deploy world of game after pul
                             steps {
                                 checkout([
                                     $class: 'GitSCM', 
-                                    branches: [[name: "*/jenkins"]], 
+                                    branches: [[name: "*/main"]], 
                                     userRemoteConfigs: [[
                                         url: 'https://github.com/idubi/WorldOfGame/',
                                         credentialsId: 'idubi_github'
