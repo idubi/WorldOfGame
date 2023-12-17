@@ -1,0 +1,206 @@
+Started by user [8mha:////4GaLSmx8MayvrLBM0BvXYMu+F4Fp7zVTPJ5zX5eAKYLfAAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzWEgZu/dLi1CL9xJTczDwAj6GcLcAAAAA=[0madmin
+[8mha:////4OUdKL6UQLhiUNiYAQoxQdr0W13bXPYt897ocrjFI4f/AAAAoh+LCAAAAAAAAP9tjTEOwjAQBM8BClpKHuFItIiK1krDC0x8GCfWnbEdkooX8TX+gCESFVvtrLSa5wtWKcKBo5UdUu8otU4GP9jS5Mixv3geZcdn2TIl9igbHBs2eJyx4YwwR1SwULBGaj0nRzbDRnX6rmuvydanHMu2V1A5c4MHCFXMWcf8hSnC9jqYxPTz/BXAFEIGsfuclm8zQVqFvQAAAA==[0m[Pipeline] Start of Pipeline
+[8mha:////4MzYAMNYVhGk1cGIf71RSNoNT2KIgAKXZthQ5+5XHr3ZAAAAoh+LCAAAAAAAAP9tjTEOAiEURD9rLGwtPQSbaGmsbAmNJ0AWEZb8zwLrbuWJvJp3kLiJlZNMMm+a93rDOic4UbLcG+wdZu14DKOti0+U+lugiXu6ck2YKRguzSSpM+cFJRUDS1gDKwEbgzpQdmgLbIVXD9UGhba9lFS/o4DGdQM8gYlqLiqVL8wJdvexy4Q/z18BzLEA29ce4gfya1RxvAAAAA==[0m[Pipeline] properties
+[8mha:////4HzbSUFdMLr9O1yogl+LmgKe5XaRhbB7WPHBzfBlh+YAAAAApR+LCAAAAAAAAP9tjUEKwjAURH8qXbh16SFSEHfiym3IxhPEJMa04f82SW1XnsireQejBVcODMwMDO/5gjpFOFJ0vLXYeUza8z6MriQ+UeyugSbe0oVrwkTBcmknScaeliopW1jEKlgJWFvUgZJHl2EjWnVXTVDomnOOZTsIqLwZ4AFMFHJWMX/LHGF7G00i/HH+AmDuM7Bd8f7zq9/WVBy+wAAAAA==[0m[Pipeline] node
+Running on [8mha:////4H+KSoDGZCqRAOliGCqtkROoUpTMoWnGKaKSOE/AuunnAAAAoh+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzOEgYx/eT83ILSktQi/fLMPFUjl8T01LwSfQCBVmYcywAAAA==[0mwin-agent in d:\jenkins_agent_executions\win-agent\workspace\docker test
+[8mha:////4KTup1fhyAPorUP1TFf77hXkzq1ohOmvyPLOi6YL6kFyAAAApR+LCAAAAAAAAP9tjTEOwjAUQ3+KOrAycoh0gQkxsUZZOEFIQkgb/d8mKe3EibgadyBQiQlLlmxL1nu+oE4RjhQdby12HpP2vA+jK4lPFLtroIm3dOGaMFGwXNpJkrGnpUrKFhaxClYC1hZ1oOTRZdiIVt1VExS65pxj2Q4CKm8GeAAThZxVzN8yR9jeRpMIf5y/AJj7DGxXvP/86jc09154wAAAAA==[0m[Pipeline] {
+[8mha:////4FNX0WGxpr8kBL4h2N/c8Sqzut840yqgMVYBCnAcE4+RAAAApR+LCAAAAAAAAP9tjTEOwjAUQ3+KOrAycoh0ggUxsUZZOEFIQkgb/d8mKe3EibgadyBQiQlLlmxL1nu+oE4RjhQdby12HpP2vA+jK4lPFLtroIm3dOGaMFGwXNpJkrGnpUrKFhaxClYC1hZ1oOTRZdiIVt1VExS65pxj2Q4CKm8GeAAThZxVzN8yR9jeRpMIf5y/AJj7DGxXvP/86jek7ggRwAAAAA==[0m[Pipeline] withCredentials
+Masking supported pattern matches of %DOCKERHUB_CREDENTIALS% or %DOCKERHUB_CREDENTIALS_USR% or %DOCKERHUB_CREDENTIALS_PSW%
+[8mha:////4IIp3hcSj7neiZ30hjYUp5RImMR+61GGQp3VtYURRiw9AAAApR+LCAAAAAAAAP9tjTEOwjAUQ3+KOrAycoh0gwExsUZZOEFIQkgb/d8mKe3EibgadyBQiQlLlmxL1nu+oE4RjhQdby12HpP2vA+jK4lPFLtroIm3dOGaMFGwXNpJkrGnpUrKFhaxClYC1hZ1oOTRZdiIVt1VExS65pxj2Q4CKm8GeAAThZxVzN8yR9jeRpMIf5y/AJj7DGxXvP/86jcChmMxwAAAAA==[0m[Pipeline] {
+[8mha:////4PoTDRtsjKfb9yOvxep5YBUZjls8byh/hzYC6NVOTiPMAAAApR+LCAAAAAAAAP9tjTEOwjAUQ3+KOrAycoh0BAkxsUZZOEFIQkgb/d8mKe3EibgadyBQiQlLlmxL1nu+oE4RjhQdby12HpP2vA+jK4lPFLtroIm3dOGaMFGwXNpJkrGnpUrKFhaxClYC1hZ1oOTRZdiIVt1VExS65pxj2Q4CKm8GeAAThZxVzN8yR9jeRpMIf5y/AJj7DGxXvP/86jfpX/cvwAAAAA==[0m[Pipeline] stage
+[8mha:////4FXUj/LNo9XiBEIaRGp4Y11McRomGvymbm13hhfAY+bQAAAApR+LCAAAAAAAAP9tjTEOwjAUQ3+KOrAycoh0BSEm1igLJwhJCGmj/9skpZ04EVfjDgQqMWHJkm3Jes8X1CnCkaLjrcXOY9Ke92F0JfGJYncNNPGWLlwTJgqWSztJMva0VEnZwiJWwUrA2qIOlDy6DBvRqrtqgkLXnHMs20FA5c0AD2CikLOK+VvmCNvbaBLhj/MXAHOfge2K959f/QbB16AVwAAAAA==[0m[Pipeline] { (Clean Workspace)
+[8mha:////4EsWG99A8cH77jZMT1MogLRpo/mIf/5UJmWSs22TXiGhAAAAoh+LCAAAAAAAAP9tjTEOwjAQBDdBFLSUPMKBEiEqWisNLzCJMU6su2BfSCpexNf4AxGRqNhqZ5p5vbFMEUeOTjWWWk+p8qoLvZueGji218CDaviiKqbEwarSDiXX9jRjyWIxL8ux0FhZqgInT06w1o15mCIYcsVZ4uQOGrmv73gi01NZTJQvjBGbW18npl/nbwBjJ8j2gny37T6VOYoyvQAAAA==[0m[Pipeline] cleanWs
+[WS-CLEANUP] Deleting project workspace...
+[WS-CLEANUP] Deferred wipeout is used...
+[WS-CLEANUP] done
+[8mha:////4HPFa3Cc+osVq7fQeVmMl4XVeJYmrpSNZFKEcgGW3JLwAAAAoh+LCAAAAAAAAP9tjbEOgjAURS8YB1dHP6KE0Rgn14bFL6hQa6F5D9uHMPlF/pr/IJHEyTvdc5bzemOdIo4cnWotdZ5S7VUfBjc/NXLsroFH1fJF1UyJg1WVHStu7GnBisViWZZjpbGxVAdOnpxgq1vzMEUw5IqzxNkdNHLf3PFEpueymChfmCJ2t6FJTL/O3wCmvhfkZSnI9h+IfpSRvQAAAA==[0m[Pipeline] }
+[8mha:////4CuoaQ6XoOnUMG/PtVDXOxCU3jo0bfirj0P3rTICetizAAAAox+LCAAAAAAAAP9tjTEOwjAQBDdBFLSUPMIRVEiIitZKwwtMYowT6y7YF5KKF/E1/kBEJCq22plmXm8sU8SRo1ONpdZTqrzqQu+mpwaO7TXwoBq+qIopcbCqtEPJtT3NWLJYzMtyLDRWlqrAyZMTrHVjHqYIhlxxlji5g0bu6zueyPRUFhPlC2PE5tbXienX+RvA2HWCfLsTZPsPzjQzob0AAAA=[0m[Pipeline] // stage
+[8mha:////4BKYNXbmF8azEA1MeWjEwdfzxdxl897qAsoPadIRNmtzAAAApx+LCAAAAAAAAP9tjTEOwjAQBM9BKWgpeYQjREGBqGgtN7zAxMY4se6CfSGpeBFf4w8EIlGx1c5Kq3m+oMwJDpS8bBy2AXMdZBd7PzU5UGovkQbZ0FnWhJmik9oNmqw7zqiJHcwRBSwULB3WkXJAz7BSjbmbKhr01YnTtO0VFMHe4AFCTWY2ib8wJlhfe5sJf56/Ahg7BrFjKDbbz7F8AxnwXE7BAAAA[0m[Pipeline] stage
+[8mha:////4KHwVPE5DGbyy+uqesOmvd3P8l+uiWr4WLjLzgk4dKKNAAAApx+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycohUCDbE1DXKwglCE0La6P/yk9JOnIircQdaKjHhwbItWe/1hiIynIidaCy2HmPtRRd6NyUxELfXQINo6CJqwkjBCmUHRcZWS1WULCzKclhJWFusA0WPLsFGNvqhy6DRlefE03aUkHtzhydkciInzelbRobtrTeR8Mf5C4CxS5Dv9rMd5mfxAbNWnxXCAAAA[0m[Pipeline] { (Checkout from github)
+[8mha:////4Pvzz1oZRKY6jAV9wu/AdeAOE98fjDjbAUfTa6bjC/3iAAAApB+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIiJKgQVVrLDS8wsTFOrDtjOyQVL+Jr/IFAJCq2WO1sM88XLFOEI0eLraHOUWocBt/baeHAsbt4HrDlMzZMib1BaQbJ2tQzSs4G5hQlLASsDDWekyObYS1adVeVV2SrU47TdxBQOn2DBxRiMmcV8xfGCJtrrxPTz/NXAGPIUG53n9qHN8W7Eii+AAAA[0m[Pipeline] checkout
+The recommended git tool is: git
+using credential ****_github
+Cloning the remote Git repository
+Cloning repository https://github.com/****/WorldOfGame/
+ > git init d:\jenkins_agent_executions\win-agent\workspace\docker test # timeout=10
+Fetching upstream changes from https://github.com/****/WorldOfGame/
+ > git --version # timeout=10
+ > git --version # 'git version 2.42.0.windows.2'
+using GIT_ASKPASS to set credentials ****_github
+ > git fetch --tags --force --progress -- https://github.com/****/WorldOfGame/ +refs/heads/*:refs/remotes/origin/* # timeout=10
+Avoid second fetch
+Checking out Revision c9cbf79c4fbd9dfb3a3ea438e987bb637a4f4786 (refs/remotes/origin/jenkins)
+Commit message: "Merge branch 'jenkins' of github.com:****/WorldOfGame into jenkins"
+ > git config remote.origin.url https://github.com/****/WorldOfGame/ # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse "refs/remotes/origin/jenkins^{commit}" # timeout=10
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f c9cbf79c4fbd9dfb3a3ea438e987bb637a4f4786 # timeout=10
+ > git rev-list --no-walk c9cbf79c4fbd9dfb3a3ea438e987bb637a4f4786 # timeout=10
+[8mha:////4G2TiprP0zMaD7CSs0zNtIFXvJoWYyqG7CSwMhB+giy6AAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIiJESDqNJabniBiY1xYt0Z2yGpeBFf4w8EIlGxxWpnm3m+YJkiHDlabA11jlLjMPjeTgsHjt3F84Atn7FhSuwNSjNI1qaeUXI2MKcoYSFgZajxnBzZDGvRqruqvCJbnXKcvoOA0ukbPKAQkzmrmL8wRthce52Yfp6/AhhDyFBu95/avQG9gN7HvgAAAA==[0m[Pipeline] }
+[8mha:////4NM2c+6OGGIZKDKGCKIgKOqIL9pISxHQpQikBABwtiC2AAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIiREGBqNJabniBiY1xYt0Z2yGpeBFf4w8EIlGxxWpnm3m+YJkiHDlabA11jlLjMPjeTgsHjt3F84Atn7FhSuwNSjNI1qaeUXI2MKcoYSFgZajxnBzZDGvRqruqvCJbnXKcvoOA0ukbPKAQkzmrmL8wRthce52Yfp6/AhhDyFBu95/avQG7xuaSvgAAAA==[0m[Pipeline] // stage
+[8mha:////4J0GhfUtvktG4a1Mw75nGAMtxqWac2ADD3deyjnd59GRAAAAph+LCAAAAAAAAP9tjTEOwjAQBM9BKWgpeYQjKpAQFa3lhheY2Bgn1l2wLyQVL+Jr/IFAJCq22llpNc8XlDnBgZKXjcM2YK6D7GLvpyYHSu0l0iAbOsuaMFN0UrtBk3XHGTWxgzmigIWCpcM6Ug7oGVaqMXdTRYO+OnGatr2CItgbPECoycwm8RfGBOtrbzPhz/NXAGPHILYMxWb3OZZv2gCbJMEAAAA=[0m[Pipeline] stage
+[8mha:////4HgE+cgEzq5wkw5hm0tO14nNG6VYK9LdVhQ8FOegujOuAAAApx+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycohUbCDE1DXKwglCE0La6P/yk9JOnIircQdaKjHhwbItWe/1hiIynIidaCy2HmPtRRd6NyUxELfXQINo6CJqwkjBCmUHRcZWS1WULCzKclhJWFusA0WPLsFGNvqhy6DRlefE03aUkHtzhydkciInzelbRobtrTeR8Mf5C4CxS5Dv9rMd5mfxASnCIIrCAAAA[0m[Pipeline] { (delete old docker container and image if existst)
+[8mha:////4OZ2FfnyXC6+Avygl7gUvlTT94cKD33c6z4WC7Pqy2EHAAAApB+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOICdAilorXc8AKTGOPEugu2g1PxIr7GH7CIRMUWq51t5vWGZfBQszfYaeothcbi4EaTFyb2/dVxwo4v2DAFdhqlTpJbfZpRctQwpyhhIWClqXEcLJkIa9Gph6qcIlOdo8/fUUBp2zs8oRDZHJWPX5g8bG5jG5h+nr8CmIYI5e6Qa78dPhmQ9Da+AAAA[0m[Pipeline] powershell
+wow-app
+Untagged: world-of-games:latest
+Deleted: sha256:767133b2bfe31394b5cf5dd29c8861e017aaa7d12bcafc7c36a715233c30d863
+[8mha:////4JqlsIH5V4tlyakWglr5ECSjxSzBXtkqS3dZnyVSBZQHAAAApB+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOKi0CFEldZKwwtMbIwT687YDknFi/gaf8AiEhVbrHa2mdcb1jHAiYPBXtNgKXYWvRtNXjhxGK6OJ+z5gh1TZKex1VPLSjcLtpw0LClKWAnYaOocR0smwVb08iErJ8lU5xTydxRQWnWHJxQim5MM6QtzgN1tVJHp5/krgNn7BOW+zlUfPiXWgpW+AAAA[0m[Pipeline] }
+[8mha:////4LVXWls4ozldaQgfqTe2V6Z6s+6UNaD/L7sfl4Oxc77UAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPMIRqZAQVVorDS8w8WGcWHfGdkgqXsTX+AMWkajYYrWzzbzesI4BThyM6JEGS7GzwrvR5CUmDsPV8SR6voiOKbJD0eLUssZmwZYTwpKihJWEDVLnOFoyCbayVw9VOUWmOqeQv6OE0uo7PKGQ2ZxUSF+YA+xuo45MP89fAczeJyjrOtf+8AEdlBFkvgAAAA==[0m[Pipeline] // stage
+[8mha:////4IH22H7obrGmLZkrTFDTe+S1i4ELOOqPHGkj0G8KEPY8AAAApx+LCAAAAAAAAP9tjTEOwjAQBM9BKWgpeYQjQUGBqGgtN7zAxMY4se6CfSGpeBFf4w8EIlGx1c5Kq3m+oMwJDpS8bBy2AXMdZBd7PzU5UGovkQbZ0FnWhJmik9oNmqw7zqiJHcwRBSwULB3WkXJAz7BSjbmbKhr01YnTtO0VFMHe4AFCTWY2ib8wJlhfe5sJf56/Ahg7BrFjKDbbz7F8A4TqtH/BAAAA[0m[Pipeline] stage
+[8mha:////4KYhYG1kOfJXergKSIDjGrfWeOhRJ+gQQjanekYoh6+IAAAApx+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycohUAjbE1DXKwglCE0La6P/yk9JOnIircQdaKjHhwbItWe/1hiIynIidaCy2HmPtRRd6NyUxELfXQINo6CJqwkjBCmUHRcZWS1WULCzKclhJWFusA0WPLsFGNvqhy6DRlefE03aUkHtzhydkciInzelbRobtrTeR8Mf5C4CxS5Dv9rMd5mfxAd6e6VPCAAAA[0m[Pipeline] { (Build Docker Image)
+[8mha:////4Kvw/76a+0o+QWUoriDmRkGr+ioQfDLsC4IVlAEp4kJvAAAApx+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycohUQjAhpq5RFk4QmhDSRv+Xn5R24kRcjTvQUokJD5ZtyXqvNxSR4UTsRGOx9RhrL7rQuymJgbi9BhpEQxdRE0YKVig7KDK2WqqiZGFRlsNKwtpiHSh6dAk2stEPXQaNrjwnnrajhNybOzwhkxM5aU7fMjJsb72JhD/OXwCMXYJ8t5/tMD+LD/hYjrHCAAAA[0m[Pipeline] script
+[8mha:////4K67sJ4OXJFPDlA7D4pFwLQnQS+ER1y9m9dQD9u0DNQ7AAAAqB+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycohUQoIFMXWNsnCC0ISQNvq//KS0EyfiatyBlkpMeLBsS9Z7vaGIDCdiJxqLrcdYe9GF3k1JDMTtNdAgGrqImjBSsELZQZGx1VIVJQuLshxWEtYW60DRo0uwkY1+6DJodOU58bQdJeTe3OEJmZzISXP6lpFhe+tNJPxx/gJg7BLku/1sh/lZfACW9ZT2wgAAAA==[0m[Pipeline] {
+[8mha:////4HZJ51mH8jnTx0Hzr4LBraH2TjDSx5WXVVw2gj+Gx52RAAAAqB+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycohUYoABMXWNsnCC0ISQNvq//KS0EyfiatyBlkpMeLBsS9Z7vaGIDCdiJxqLrcdYe9GF3k1JDMTtNdAgGrqImjBSsELZQZGx1VIVJQuLshxWEtYW60DRo0uwkY1+6DJodOU58bQdJeTe3OEJmZzISXP6lpFhe+tNJPxx/gJg7BLku/1sh/lZfAAyQCqkwgAAAA==[0m[Pipeline] dir
+Running in d:\jenkins_agent_executions\win-agent\workspace\docker test
+[8mha:////4DPK8hW+7LQdXoSh7VOCaELFKziWawmSeTvX771Umi4yAAAAqB+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycohUYgEJMXWNsnCC0ISQNvq//KS0EyfiatyBlkpMeLBsS9Z7vaGIDCdiJxqLrcdYe9GF3k1JDMTtNdAgGrqImjBSsELZQZGx1VIVJQuLshxWEtYW60DRo0uwkY1+6DJodOU58bQdJeTe3OEJmZzISXP6lpFhe+tNJPxx/gJg7BLku/1sh/lZfAAnLfKUwgAAAA==[0m[Pipeline] {
+[8mha:////4OzUjar950IQJOE2khfBl5boEodZWEEYhh6mfsubKZ6ZAAAApB+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIiUYEQVVrLDS8wsTFOrDtjOyQVL+Jr/IFAJCq2WO1sM88XLFOEI0eLraHOUWocBt/baeHAsbt4HrDlMzZMib1BaQbJ2tQzSs4G5hQlLASsDDWekyObYS1adVeVV2SrU47TdxBQOn2DBxRiMmcV8xfGCJtrrxPTz/NXAGPIUG53n9qHNwcnzs++AAAA[0m[Pipeline] bat
+
+d:\jenkins_agent_executions\win-agent\workspace\docker test>docker build -t world-of-games . 
+#0 building with "default" instance using docker driver
+
+#1 [internal] load .dockerignore
+#1 transferring context: 2B done
+#1 DONE 0.0s
+
+#2 [internal] load build definition from Dockerfile
+#2 transferring dockerfile: 1.11kB 0.0s done
+#2 DONE 0.0s
+
+#3 [internal] load metadata for docker.io/library/python:3.12-alpine
+#3 DONE 0.0s
+
+#4 [ 1/14] FROM docker.io/library/python:3.12-alpine
+#4 DONE 0.0s
+
+#5 [internal] load build context
+#5 transferring context: 10.21kB 0.0s done
+#5 DONE 0.0s
+
+#6 [ 3/14] COPY ./const /const
+#6 CACHED
+
+#7 [10/14] RUN apk add --no-cache python3 &&     python3 -m ensurepip &&     pip3 install --upgrade pip
+#7 CACHED
+
+#8 [12/14] RUN pip install -r requirements.txt
+#8 CACHED
+
+#9 [ 4/14] COPY ./static /static
+#9 CACHED
+
+#10 [ 5/14] COPY ./app.py /app.py
+#10 CACHED
+
+#11 [11/14] RUN pip install --upgrade pip
+#11 CACHED
+
+#12 [ 6/14] COPY ./score.py /score.py
+#12 CACHED
+
+#13 [ 7/14] COPY ./utils.py /utils.py
+#13 CACHED
+
+#14 [ 9/14] COPY ./resources/requirements.txt requirements.txt
+#14 CACHED
+
+#15 [ 8/14] COPY ./resources/scores.txt /resources/scores.txt
+#15 CACHED
+
+#16 [ 2/14] COPY ./server /server
+#16 CACHED
+
+#17 [13/14] RUN ln -s /resources/scores.txt  /scores.txt
+#17 CACHED
+
+#18 exporting to image
+#18 exporting layers done
+#18 writing image sha256:767133b2bfe31394b5cf5dd29c8861e017aaa7d12bcafc7c36a715233c30d863 done
+#18 naming to docker.io/library/world-of-games 0.0s done
+#18 DONE 0.0s
+
+View build details: docker-desktop://dashboard/build/default/default/19toozs4qr0bpzt6b62qdwl7k
+
+What's Next?
+  View a summary of image vulnerabilities and recommendations → docker scout quickview
+[8mha:////4DxgEG8JOlW/8G/+xbSlridp/OqlvIzTk9bGMT07z64EAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOKCoEFCqWgtN7zAJMY4se6C7eBUvIiv8QcsIlGxxWpnm3m9YRk81OwNdpp6S6GxOLjR5IWJfX91nLDjCzZMgZ1GqZPkVp9mlBw1zClKWAhYaWocB0smwlp06qEqp8hU5+jzdxRQ2vYOTyhENkfl4xcmD5vb2Aamn+evAKZhiFDut7l2hw9hbYOkvgAAAA==[0m[Pipeline] }
+[8mha:////4Fmxf8JBHuy+m20UzknxBdCd6D9YFAOPyke++e3IH/Y0AAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIioKBAqWgtN7zAJMY4se6C7eBUvIiv8QcsIlGxxWpnm3m9YRk81OwNdpp6S6GxOLjR5IWJfX91nLDjCzZMgZ1GqZPkVp9mlBw1zClKWAhYaWocB0smwlp06qEqp8hU5+jzdxRQ2vYOTyhENkfl4xcmD5vb2Aamn+evAKZhiFDut7l2hw9Vo2D/vgAAAA==[0m[Pipeline] // dir
+[8mha:////4NhDNyLkGGnJ8M28jCHHMi5n+ggAcSm73K8+qRnHpu66AAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIiBYkGUaW10vACExvjxLoztkNS8SK+xh+wiETFFqudbeb1hnUMcOJgsNc0WIqdRe9GkxdOHIar4wl7vmDHFNlpbPXUstLNgi0nDUuKElYCNpo6x9GSSbAVvXzIykky1TmF/B0FlFbd4QmFyOYkQ/rCHGB3G1Vk+nn+CmD2PkG5r3PVhw9t4fMOvgAAAA==[0m[Pipeline] }
+[8mha:////4Ado58HrtR4ri9gE9p3Q4Ox0o4aUH39Gs+7Ho/RcUCEtAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPMKRiKgQVVorDS8w8WGcWHfGdkgqXsTX+AMWkajYYrWzzbzesI4BThyM6JEGS7GzwrvR5CUmDsPV8SR6voiOKbJD0eLUssZmwZYTwpKihJWEDVLnOFoyCbayVw9VOUWmOqeQv6OE0uo7PKGQ2ZxUSF+YA+xuo45MP89fAczeJyjrOtf+8AFyY6ZcvgAAAA==[0m[Pipeline] // script
+[8mha:////4Hnq0H/E626jxpZQEgKgkh7gE4PJbck7nJcYM9T5ADCeAAAApB+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIiQTpEldZKwwtMbIwT687YDknFi/gaf8AiEhVbrHa2mdcb1jHAiYPBXtNgKXYWvRtNXjhxGK6OJ+z5gh1TZKex1VPLSjcLtpw0LClKWAnYaOocR0smwVb08iErJ8lU5xTydxRQWnWHJxQim5MM6QtzgN1tVJHp5/krgNn7BOWhzrWvP1xjpDa+AAAA[0m[Pipeline] }
+[8mha:////4I5OqtajE7euCEVtVEkrpFDnzYU4o1vBuXfJKo3LBzDsAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPMKRiKgQVVorDS8w8WGcWHfGdkgqXsTX+AMWkajYYrWzzbzesI4BThyM6JEGS7GzwrvR5CUmDsPV8SR6voiOKbJD0eLUssZmwZYTwpKihJWEDVLnOFoyCbayVw9VOUWmOqeQv6OE0uo7PKGQ2ZxUSF+YA+xuo45MP89fAczeJyjrQ659/QFaJZxjvgAAAA==[0m[Pipeline] // stage
+[8mha:////4OskylRwOUPRQJ52mWYh1BBjHadlX5pK+5DPYcqp3isWAAAApx+LCAAAAAAAAP9tjTEOwjAQBM9BKWgpeYRTIEGBqGgtN7zAxMY4se6CfSGpeBFf4w8EIlGx1c5Kq3m+oMwJDpS8bBy2AXMdZBd7PzU5UGovkQbZ0FnWhJmik9oNmqw7zqiJHcwRBSwULB3WkXJAz7BSjbmbKhr01YnTtO0VFMHe4AFCTWY2ib8wJlhfe5sJf56/Ahg7BrFjKDbbz7F8A4NwDonBAAAA[0m[Pipeline] stage
+[8mha:////4OOK5SdZrx5LOcnKR+nKogzjGQ7Vq10XojYM38QH0zDRAAAAqB+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycoh0QIIBMXWNsnCC0ISQNvq//KS0EyfiatyBlkpMeLBsS9Z7vaGIDCdiJxqLrcdYe9GF3k1JDMTtNdAgGrqImjBSsELZQZGx1VIVJQuLshxWEtYW60DRo0uwkY1+6DJodOU58bQdJeTe3OEJmZzISXP6lpFhe+tNJPxx/gJg7BLku/1sh/lZfADpB/iZwgAAAA==[0m[Pipeline] { (Run Docker Container)
+[8mha:////4Lyf3TZZua/bgW9tC26Fy88WIfLF9e+aVFFUmwbEvZEPAAAAqB+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycoh0YAAJMXWNsnCC0ISQNvq//KS0EyfiatyBlkpMeLBsS9Z7vaGIDCdiJxqLrcdYe9GF3k1JDMTtNdAgGrqImjBSsELZQZGx1VIVJQuLshxWEtYW60DRo0uwkY1+6DJodOU58bQdJeTe3OEJmZzISXP6lpFhe+tNJPxx/gJg7BLku/1sh/lZfAD8aiCpwgAAAA==[0m[Pipeline] script
+[8mha:////4Gbx5njStDODtL62CpbJ5/wqB35oafrksZgEH9rL4TciAAAApx+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycoh0YAEhpq5RFk4QmhDSRv+Xn5R24kRcjTvQUokJD5ZtyXqvNxSR4UTsRGOx9RhrL7rQuymJgbi9BhpEQxdRE0YKVig7KDK2WqqiZGFRlsNKwtpiHSh6dAk2stEPXQaNrjwnnrajhNybOzwhkxM5aU7fMjJsb72JhD/OXwCMXYJ8t5/tMD+LD59NhPHCAAAA[0m[Pipeline] {
+[8mha:////4EL2F7jp0OtS+sn1ad5g0FuOcvvecqw+oz3fBltf8cRHAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOKCBA1CqWgtN7zAJMY4se6C7eBUvIiv8QcsIlGxxWpnm3m9YRk81OwNdpp6S6GxOLjR5IWJfX91nLDjCzZMgZ1GqZPkVp9mlBw1zClKWAhYaWocB0smwlp06qEqp8hU5+jzdxRQ2vYOTyhENkfl4xcmD5vb2Aamn+evAKYhQrk75Npvhw/W61xwvgAAAA==[0m[Pipeline] bat
+
+d:\jenkins_agent_executions\win-agent\workspace\docker test>docker run -d -p 8777:8777 --name wow-app world-of-games 
+a6a658e81bfc779b69b988b1378c6b2976b8328a6f5c1f5893219aa98848eb4b
+[8mha:////4Li4l6DnMzFdrVNyvVLZChwCTTe771vtcAW730FdM6JRAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIiBA1CqWgtN7zAJMY4se6C7eBUvIiv8QcsIlGxxWpnm3m9YRk81OwNdpp6S6GxOLjR5IWJfX91nLDjCzZMgZ1GqZPkVp9mlBw1zClKWAhYaWocB0smwlp06qEqp8hU5+jzdxRQ2vYOTyhENkfl4xcmD5vb2Aamn+evAKZhiFDut7l2hw+dgWTEvgAAAA==[0m[Pipeline] }
+[8mha:////4CR13DL6fTkf9qA5z13pVEUmyTFiVDOSZke7xCH02Z+KAAAAph+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIiAQUSSkVrueEFJjHGiXUXbAen4kV8jT9gEYmKLVY728zrDcvgoWZvsNPUWwqNxcGNJi9M7Pur44QdX7BhCuw0Sp0kt/o0o+SoYU5RwkLASlPjOFgyEdaiUw9VOUWmOkefv6OA0rZ3eEIhsjkqH78wedjcxjYw/Tx/BTANQ4Ryv821O3wApcP3Nb4AAAA=[0m[Pipeline] // script
+[8mha:////4IsR3X4eITbJvjat8GqWo9LTliwpBlnUh2m16rzjDaBoAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOJSBIkCUaW10vACExvjxLoztkNS8SK+xh+wiETFFqudbeb1hnUMcOJgsNc0WIqdRe9GkxdOHIar4wl7vmDHFNlpbPXUstLNgi0nDUuKElYCNpo6x9GSSbAVvXzIykky1TmF/B0FlFbd4QmFyOYkQ/rCHGB3G1Vk+nn+CmD2PkG5r3PVhw+RDRRuvgAAAA==[0m[Pipeline] }
+[8mha:////4G80jRt/ACvyouejwNpBYIk+p9bknpH6lvN/H4sk1sPRAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPMIpiGgQVVorDS8w8WGcWHfGdkgqXsTX+AMWkajYYrWzzbzesI4BThyM6JEGS7GzwrvR5CUmDsPV8SR6voiOKbJD0eLUssZmwZYTwpKihJWEDVLnOFoyCbayVw9VOUWmOqeQv6OE0uo7PKGQ2ZxUSF+YA+xuo45MP89fAczeJyjrOtf+8AG/DRYEvgAAAA==[0m[Pipeline] // stage
+[8mha:////4KxWf1mup3XtieZV+GS+VoWXPeI3XAdJti24kSdetNZQAAAAph+LCAAAAAAAAP9tjTEOwjAQBM9BKWgpeYTTgCgQFa3lhheY2Bgn1l2wLyQVL+Jr/IFAJCq22llpNc8XlDnBgZKXjcM2YK6D7GLvpyYHSu0l0iAbOsuaMFN0UrtBk3XHGTWxgzmigIWCpcM6Ug7oGVaqMXdTRYO+OnGatr2CItgbPECoycwm8RfGBOtrbzPhz/NXAGPHIHYMxWb7OZZvozw9ysEAAAA=[0m[Pipeline] stage
+[8mha:////4K3ciRtVnj59P5X+jVFH2iRlprXQRM8j5Lof4R8JFlecAAAApx+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycoh0ARbE1DXKwglCE0La6P/yk9JOnIircQdaKjHhwbItWe/1hiIynIidaCy2HmPtRRd6NyUxELfXQINo6CJqwkjBCmUHRcZWS1WULCzKclhJWFusA0WPLsFGNvqhy6DRlefE03aUkHtzhydkciInzelbRobtrTeR8Mf5C4CxS5Dv9rMd5mfxAUxleXrCAAAA[0m[Pipeline] { (E2E test on exported port)
+[8mha:////4BKijNvaZ3h234BESLrAyHVM3Tv8jVa6JKKeFq14cH2VAAAApx+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycoh0QTAgpq5RFk4QmhDSRv+Xn5R24kRcjTvQUokJD5ZtyXqvNxSR4UTsRGOx9RhrL7rQuymJgbi9BhpEQxdRE0YKVig7KDK2WqqiZGFRlsNKwtpiHSh6dAk2stEPXQaNrjwnnrajhNybOzwhkxM5aU7fMjJsb72JhD/OXwCMXYJ8t5/tMD+LD+jQxyjCAAAA[0m[Pipeline] script
+[8mha:////4HPD8sPSfvEKrx5954hU/t+pXdr/BNVveRYCWYwb888BAAAAqB+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycoh0QQIJMXWNsnCC0ISQNvq//KS0EyfiatyBlkpMeLBsS9Z7vaGIDCdiJxqLrcdYe9GF3k1JDMTtNdAgGrqImjBSsELZQZGx1VIVJQuLshxWEtYW60DRo0uwkY1+6DJodOU58bQdJeTe3OEJmZzISXP6lpFhe+tNJPxx/gJg7BLku/1sh/lZfAD9vR8YwgAAAA==[0m[Pipeline] {
+[8mha:////4By/Iqh8ODUGJyj0iDQ0/bBzmIrBLhUz4yo2Z1VQDfTMAAAApB+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOLSUIAQVVrLDS8wsTFOrDtjOyQVL+Jr/IFAJCq2WO1sM88XLFOEI0eLraHOUWocBt/baeHAsbt4HrDlMzZMib1BaQbJ2tQzSs4G5hQlLASsDDWekyObYS1adVeVV2SrU47TdxBQOn2DBxRiMmcV8xfGCJtrrxPTz/NXAGPIUG53n9qHNzJSLA2+AAAA[0m[Pipeline] bat
+
+d:\jenkins_agent_executions\win-agent\workspace\docker test>pip install selenium 
+Requirement already satisfied: selenium in c:\python312\lib\site-packages (4.15.2)
+Requirement already satisfied: urllib3[socks]<3,>=1.26 in c:\python312\lib\site-packages (from selenium) (2.1.0)
+Requirement already satisfied: trio~=0.17 in c:\python312\lib\site-packages (from selenium) (0.23.1)
+Requirement already satisfied: trio-websocket~=0.9 in c:\python312\lib\site-packages (from selenium) (0.11.1)
+Requirement already satisfied: certifi>=2021.10.8 in c:\python312\lib\site-packages (from selenium) (2023.11.17)
+Requirement already satisfied: attrs>=20.1.0 in c:\python312\lib\site-packages (from trio~=0.17->selenium) (23.1.0)
+Requirement already satisfied: sortedcontainers in c:\python312\lib\site-packages (from trio~=0.17->selenium) (2.4.0)
+Requirement already satisfied: idna in c:\python312\lib\site-packages (from trio~=0.17->selenium) (3.6)
+Requirement already satisfied: outcome in c:\python312\lib\site-packages (from trio~=0.17->selenium) (1.3.0.post0)
+Requirement already satisfied: sniffio>=1.3.0 in c:\python312\lib\site-packages (from trio~=0.17->selenium) (1.3.0)
+Requirement already satisfied: cffi>=1.14 in c:\python312\lib\site-packages (from trio~=0.17->selenium) (1.16.0)
+Requirement already satisfied: wsproto>=0.14 in c:\python312\lib\site-packages (from trio-websocket~=0.9->selenium) (1.2.0)
+Requirement already satisfied: pysocks!=1.5.7,<2.0,>=1.5.6 in c:\python312\lib\site-packages (from urllib3[socks]<3,>=1.26->selenium) (1.7.1)
+Requirement already satisfied: pycparser in c:\python312\lib\site-packages (from cffi>=1.14->trio~=0.17->selenium) (2.21)
+Requirement already satisfied: h11<1,>=0.9.0 in c:\python312\lib\site-packages (from wsproto>=0.14->trio-websocket~=0.9->selenium) (0.14.0)
+
+[notice] A new release of pip is available: 23.2.1 -> 23.3.1
+[notice] To update, run: python.exe -m pip install --upgrade pip
+[8mha:////4AfVMkE7JRN+nHKP2Zp2y53CBmIpmfvUFxaXrLZUfVkqAAAAph+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOJCARISSkVrueEFJjHGiXUXbAen4kV8jT9gEYmKLVY728zrDcvgoWZvsNPUWwqNxcGNJi9M7Pur44QdX7BhCuw0Sp0kt/o0o+SoYU5RwkLASlPjOFgyEdaiUw9VOUWmOkefv6OA0rZ3eEIhsjkqH78wedjcxjYw/Tx/BTANEcrdIdd+O3wATIMs3b4AAAA=[0m[Pipeline] bat
+
+d:\jenkins_agent_executions\win-agent\workspace\docker test>python ./tests/E2E_Score_Unites.py 
+..
+----------------------------------------------------------------------
+Ran 2 tests in 7.257s
+
+OK
+[8mha:////4PddXicrGewYO0IBxGmMpdKc6czvcTqygyMLtz/cf7CdAAAAph+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIiJJCQUCpayw0vMIkxTqy7YDs4FS/ia/wBi0hUbLHa2WZeb1gGDzV7g52m3lJoLA5uNHlhYt9fHSfs+IINU2CnUeokudWnGSVHDXOKEhYCVpoax8GSibAWnXqoyiky1Tn6/B0FlLa9wxMKkc1R+fiFycPmNraB6ef5K4BpGCKU+22u3eEDeCxVWr4AAAA=[0m[Pipeline] }
+[8mha:////4MTYYDeTOF2uRl/L51hbvlkdTFN0pHQHn+wO8ScLO2aMAAAAph+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIiIRAFSkVrueEFJjHGiXUXbAen4kV8jT9gEYmKLVY728zrDcvgoWZvsNPUWwqNxcGNJi9M7Pur44QdX7BhCuw0Sp0kt/o0o+SoYU5RwkLASlPjOFgyEdaiUw9VOUWmOkefv6OA0rZ3eEIhsjkqH78wedjcxjYw/Tx/BTANQ4Ryv821O3wAR0N+TL4AAAA=[0m[Pipeline] // script
+[8mha:////4NCxxLHC+aLTrbSzHKR9pLrdCKwxtqKJ8zaccUxi25LBAAAApR+LCAAAAAAAAP9tjTsOwjAQRDdBFLSUHGJT8GlQKlrLDScwiTFOrN1gOzgVJ+Jq3AGLSFRMMZo3zXu9YRk81OwNdpp6S6GxOLjR5IWJfX91nLDjCzZMgZ1GqZPkVp9mlBw1zClKWAhYaWocB0smwlp06qEqp8hU5+jzdxRQ2vYOTyhENkfl4xcmD5vb2Aamn+evAKZhiFDut7l2hw90oCXwvgAAAA==[0m[Pipeline] }
+[8mha:////4CFiwMvJbaXlFOBo5/DHvOzXfqSWI9dqyPxk8l68FsAuAAAApB+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPMJpkgpR0VppeIGJjXFi3Tn2haTiRXyNP2ARiYotVjvbzOsN2xThRNGK3uDgMHVOBD/ZvMRMcbh5mkVPV9ERJvJGtGZuSZvzii2xgTVFCRsJO4Odp+TQMuxlrx6q8gptdeGYv6OE0ukRnlDIbGYV+QtLhMN90onw5/krgCUEhrKpc9XNB3bBKXS+AAAA[0m[Pipeline] // stage
+[8mha:////4Fsn9/O0Wu9UIgDtVEaDrvKKmuBVmoNpZtYY6jSQXOyyAAAAph+LCAAAAAAAAP9tjTEOwjAQBC9BKWgpeYRTRRSIitZywwtMbIwT6y7YF5KKF/E1/oAhEhVb7ay0mucLqhThQNGJzmLvMbVeDGF0uYmJYn8JNImOzqIlTBSsUHZSZOxxQUVsYUlRwkrC2mIbKHl0DBvZ6buug0ZXnzjmbS+h9OYGDyhkNrOO/IU5wvY6mkT48/wVwDwwFDuGsmk+x+oNFzdKbMEAAAA=[0m[Pipeline] stage
+[8mha:////4EhOoV46xGGf9sjjF53DUe6rljf5zv1+PaodrK2l5iPgAAAAph+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycoh0KgtiYo2ycILQhJA0+r9NUtKJE3E17kBLJSY8WLYl673eUMUAJwqGOY2dxdha1vvRzIllCt3NU2aOrqwljOQ1EzoLUvq8VkFJw6qihA2HrcbWU7RoEuy4kw9Ze4mmvqQwb0cOpVUDPKHgMznJkL5lCrC/jyoS/jh/ATD1CcqmWeywPKsPlyKrR8IAAAA=[0m[Pipeline] { (login to dockerhub)
+[8mha:////4APQ0FAnnBJV9zWsAOAhqdHC744PzS36BgcFykj9ekSlAAAApB+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOJSAQWiSmu54QUmNsaJdWdsh6TiRXyNPxCIRMUWq51t5vmCZYpw5GixNdQ5So3D4Hs7LRw4dhfPA7Z8xoYpsTcozSBZm3pGydnAnKKEhYCVocZzcmQzrEWr7qryimx1ynH6DgJKp2/wgEJM5qxi/sIYYXPtdWL6ef4KYAwZyu3uU/vwBkhu+A6+AAAA[0m[Pipeline] bat
+
+d:\jenkins_agent_executions\win-agent\workspace\docker test>echo ****   | docker login -u **** --password-stdin 
+Error response from daemon: Get "https://registry-1.docker.io/v2/": unauthorized: incorrect username or password
+[8mha:////4PtpABnbuqLxFlUGAUtOwZJdizFONzoTOPtJjOYwZNTZAAAApB+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOJSgZAQVVrLDS8wsTFOrDtjOyQVL+Jr/IFAJCq2WO1sM88XLFOEI0eLraHOUWocBt/baeHAsbt4HrDlMzZMib1BaQbJ2tQzSs4G5hQlLASsDDWekyObYS1adVeVV2SrU47TdxBQOn2DBxRiMmcV8xfGCJtrrxPTz/NXAGMIGcrt/lO7N/Zh+YO+AAAA[0m[Pipeline] }
+[8mha:////4Khke0FB0LWlRj6xFg0Wf95WlUpT+Ah3RWzIQn91epHIAAAAox+LCAAAAAAAAP9tjTESwiAURH/iWNhaeghSpXAcK1uGxhNggghh/idAJJUn8mreQTQzVm6xs2+b93zBOgY4UtDMKhwMxs4w7yZdFssUhqujzCxdWEcYySkmVBbUq9OCgpKCJVUNKw4bhZ2jaFAn2HIr77JxEnVzTqF8Bw616Ud4QMWLOcmQvjAH2N2mPhL+PH8FMHufoG73n2rf6eOs0b4AAAA=[0m[Pipeline] // stage
+[8mha:////4MQWEubzkPBQ4AIAJNnavK3vXXsQy2If9TZDU0IWwAlBAAAAph+LCAAAAAAAAP9tjTEOwjAQBM9BKWgpeYRDBQWiorXc8AITG+PEugv2haTiRXyNPxCIRMVWOyut5vmCMic4UPKycdgGzHWQXez91ORAqb1EGmRDZ1kTZopOajdosu44oyZ2MEcUsFCwdFhHygE9w0o15m6qaNBXJ07TtldQBHuDBwg1mdkk/sKYYH3tbSb8ef4KYOwYxI6h2G4+x/INObxvDcEAAAA=[0m[Pipeline] stage
+[8mha:////4FlO2y0Grjo+V6RozMHsIsfau+hRA9oyZMxjyCrrAXueAAAApx+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycogUFhbE1DXKwglCE0La6P/yk9JOnIircQdaKjHhwbItWe/1hiIynIidaCy2HmPtRRd6NyUxELfXQINo6CJqwkjBCmUHRcZWS1WULCzKclhJWFusA0WPLsFGNvqhy6DRlefE03aUkHtzhydkciInzelbRobtrTeR8Mf5C4CxS5AfdrPt52fxAQB2j23CAAAA[0m[Pipeline] { (push to dockerhub)
+Stage "push to dockerhub" skipped due to earlier failure(s)
+[8mha:////4DXEpIzEX68Uq3oQe85b6sAGZivGx+7vS/kFTfNa+1l8AAAApB+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIiKGgQVVrLDS8wsTFOrDtjOyQVL+Jr/IFAJCq2WO1sM88XLFOEI0eLraHOUWocBt/baeHAsbt4HrDlMzZMib1BaQbJ2tQzSs4G5hQlLASsDDWekyObYS1adVeVV2SrU47TdxBQOn2DBxRiMmcV8xfGCJtrrxPTz/NXAGMIGcr97lPbN22ew6a+AAAA[0m[Pipeline] }
+[8mha:////4J3T0DYjF6Z35LxkU1MyxRs25JeelGJnSAVw6s7e+eYsAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOKChESDqNJabniBiY1xYt0Z2yGpeBFf4w8EIlGxxWpnm3m+YJkiHDlabA11jlLjMPjeTgsHjt3F84Atn7FhSuwNSjNI1qaeUXI2MKcoYSFgZajxnBzZDGvRqruqvCJbnXKcvoOA0ukbPKAQkzmrmL8wRthce52Yfp6/AhhDyFDud5/avgFefZgavgAAAA==[0m[Pipeline] // stage
+[8mha:////4DROZcD/vj6hT7ggvYyHk/m/PQeEAKfKDW+NW/ZEdPqDAAAAph+LCAAAAAAAAP9tjTEOwjAQBM9BKWgpeYTTICgQFa3lhheY2Bgn1l2wLyQVL+Jr/IFAJCq22llpNc8XlDnBgZKXjcM2YK6D7GLvpyYHSu0l0iAbOsuaMFN0UrtBk3XHGTWxgzmigIWCpcM6Ug7oGVaqMXdTRYO+OnGatr2CItgbPECoycwm8RfGBOtrbzPhz/NXAGPHIHYMxXbzOZZvL/7+lsEAAAA=[0m[Pipeline] stage
+[8mha:////4LkI75jA5nm9z1SzJsrdoOD6WYs1OzrV9gDodpxjKp/eAAAApx+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycoh0ARbE1DXKwglCE0La6P/yk9JOnIircQdaKjHhwbItWe/1hiIynIidaCy2HmPtRRd6NyUxELfXQINo6CJqwkjBCmUHRcZWS1WULCzKclhJWFusA0WPLsFGNvqhy6DRlefE03aUkHtzhydkciInzelbRobtrTeR8Mf5C4CxS5AfdrPt52fxAZRHx0bCAAAA[0m[Pipeline] { (Declarative: Post Actions)
+[8mha:////4Lu+VIVdieJBzF6CB1kZqlCoM9ixrEPrUikpmevTZN83AAAAox+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOJSkQZR0VppeIFJjLFj3Tm2g1PxIr7GHwhEomKL1c4283zBOgY4ctBoFfWGYmvQu1HPCzOH/uo4o+ULtkyRncJG5YY7dVqw4aRgSVHCSsBGUes4GtIJtsLKu6ycJF2dU5i/g4DSdAM8oBCzOcmQvjAF2N3GLjL9PH8FMPkEZb3/VO3fLvzCqr4AAAA=[0m[Pipeline] powershell
+Removing login credentials for https://index.docker.io/v1/
+[8mha:////4NLYT0SCC634Ah1XwREgyHSGE2EUVebI4nE0vVjLQG2zAAAApB+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOJSAQWiSmu54QUmNsaJdWdsh6TiRXyNPxCIRMUWq51t5vmCZYpw5GixNdQ5So3D4Hs7LRw4dhfPA7Z8xoYpsTcozSBZm3pGydnAnKKEhYCVocZzcmQzrEWr7qryimx1ynH6DgJKp2/wgEJM5qxi/sIYYXPtdWL6ef4KYAwhQ7nbf2r7BsfLY/G+AAAA[0m[Pipeline] }
+[8mha:////4CDlux1UYTVDSeOr8bFM5v1dR+dV6UQaRZsrPzrF2c+/AAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOLSIISEqNJabniBiY1xYt0Z2yGpeBFf4w8EIlGxxWpnm3m+YJkiHDlabA11jlLjMPjeTgsHjt3F84Atn7FhSuwNSjNI1qaeUXI2MKcoYSFgZajxnBzZDGvRqruqvCJbnXKcvoOA0ukbPKAQkzmrmL8wRthce52Yfp6/AhhDyFDu9p/avgGESTJ3vgAAAA==[0m[Pipeline] // stage
+[8mha:////4Fcj6ZRpr1NitEOk0srVEekAnVQ8cjew36bicoZusmMvAAAAox+LCAAAAAAAAP9tjTEOwjAQBDdBFLSUPMLpQAhR0VppeIFJjHFi3QX7QlLxIr7GH4iIRMVWO9PM641lijhydKqx1HpKlVdd6N301MCxvQYeVMMXVTElDlaVdii5tqcZSxaLeVmOhcbKUhU4eXKCtW7MwxTBkCvOEid30Mh9fccTmZ7KYqJ8YYzY3Po6Mf06fwMYu06Qb/eCbPcB9ihZW70AAAA=[0m[Pipeline] }
+[8mha:////4GWC/qkRyfpaVObILdOtzR613cNR1a2X6Cel/5iVZ0XXAAAAox+LCAAAAAAAAP9tjTESgjAQRT84FraWHiJYaeFY2WZoPEGEGAOZXUwWofJEXs07yMiMlb/67zXv9cYyRRw5OtVYaj2lyqsu9G56auDYXgMPquGLqpgSB6tKO5Rc29OMJYvFvCzHQmNlqQqcPDnBWjfmYYpgyBVniZM7aOS+vuOJTE9lMVG+MEZsbn2dmH6dvwGMXSfI91tBtvsAtKkS6r0AAAA=[0m[Pipeline] // withCredentials
+[8mha:////4KNAfBuC4Nj2i5lYnccBVwgD/dTvmGqhDp3b0RDBg+1kAAAApB+LCAAAAAAAAP9tjTEOwjAQBDdBFLSUPMIRBaJAVLRWGl5gEmOcWHfBvpBUvIiv8QciIlGx1c4083pjmSKOHJ1qLLWeUuVVF3o3PTVwbK+BB9XwRVVMiYNVpR1Kru1pxpLFYl6WY6GxslQFTp6cYK0b8zBFMOSKs8TJHTRyX9/xRKanspgoXxgjNre+Tky/zt8Axq4T5PutINt9AL7Re069AAAA[0m[Pipeline] }
+[8mha:////4Le7k3G0QsSJlD0QVwyQdwrg8Wma2z622d0MM6hXBk4JAAAApB+LCAAAAAAAAP9tjTEOwjAQBDdBFLSUPMKREBIFoqK10vACkxjjxLoL9oWk4kV8jT8QEYmKrXammdcbyxRx5OhUY6n1lCqvutC76amBY3sNPKiGL6piShysKu1Qcm1PM5YsFvOyHAuNlaUqcPLkBGvdmIcpgiFXnCVO7qCR+/qOJzI9lcVE+cIYsbn1dWL6df4GMHadIN9vBdnuA/ib3H69AAAA[0m[Pipeline] // node
+[8mha:////4MpOt5JVFsTxIn8YGIRZMvdPzopGzDdW30jlF2HzRPZ6AAAApB+LCAAAAAAAAP9tjTEOwjAQBDdBFLSUPMKRoKBAVLRWGl5gEmOcWHfBvpBUvIiv8QciIlGx1c4083pjmSKOHJ1qLLWeUuVVF3o3PTVwbK+BB9XwRVVMiYNVpR1Kru1pxpLFYl6WY6GxslQFTp6cYK0b8zBFMOSKs8TJHTRyX9/xRKanspgoXxgjNre+Tky/zt8Axq4T5PudINt+AH0X36q9AAAA[0m[Pipeline] End of Pipeline
+ERROR: script returned exit code 1
+Finished: FAILURE

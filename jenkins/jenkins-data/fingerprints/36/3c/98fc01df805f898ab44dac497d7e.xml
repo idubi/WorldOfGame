@@ -1,0 +1,13 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<fingerprint>
+  <timestamp>2023-12-01 01:13:24.947 UTC</timestamp>
+  <md5sum>363c98fc01df805f898ab44dac497d7e</md5sum>
+  <fileName>Credential id=idubi_dockerhub name=idubi_dockerhub</fileName>
+  <usages>
+    <entry>
+      <string>docker test</string>
+      <ranges>79-83</ranges>
+    </entry>
+  </usages>
+  <facets/>
+</fingerprint>

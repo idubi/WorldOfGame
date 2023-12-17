@@ -1,0 +1,10 @@
+commit af42fb3a1935da4f82488328250a84879606a76c
+tree 71468e9905cc6073493f5050f06a6153363d43cf
+parent 43e2b7cd126a58c60aaff346093c703b12aab5c2
+author idubi <ido.bistry@gmail.com> 2023-12-14 02:37:22 +0200
+committer idubi <ido.bistry@gmail.com> 2023-12-14 02:37:22 +0200
+
+    filter out "latest" from list - fix bug
+
+
+:100644 100644 ef895e5f555d783c556b3b5e587bcbd34496ec22 c1af8d61c90cbc96d987c3542843a121b262de62 M	docker/docker-hub-utils.py
