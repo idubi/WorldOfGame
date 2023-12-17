@@ -20,4 +20,4 @@ jenkins-data.zip
 start.sh
 chrome/
 */logs/
-
+*/jenkins/jenkins-data/.cache/

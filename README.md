@@ -25,7 +25,7 @@ this volum contains all needed for jenkins allready install in order to load jen
 
 ![win-agent before execution](https://github.com/idubi/WorldOfGame/blob/main/resources/images/win-agent%20not%20active.jpg?raw=true)
 
-**2**  . for windws agent to run you will need to execite this 2 commands: 
+**2**  . for windws agent to run you will need to execute this 2 commands: 
 
     1. curl.exe -sO http://localhost:8080/jnlpJars/agent.jar
     2. java -jar agent.jar -url http://localhost:8080/ -secret 662069054a25e40cb0e83bc2af14418a2b4e3978296604d3cae07250e13c3741 -name "win-agent" -workDir "d:\jenkins_agent_executions\win-agent"
