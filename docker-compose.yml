@@ -15,16 +15,28 @@ services:
       MARIADB_USER: scores
       MARIADB_PASSWORD: scores
       MARIADB_DATABASE: scoresdb
-#   jenkins:
-#     volumes:
-#       - 'jenkins_data:/bitnami/jenkins
-# volumes:
-#   jenkins_data:
-#     driver: local
+  jenkins:
+    image: jenkins/jenkins:latest
+    ports:
+      - 8080:8080 
+      - 8000:80 
+      - 50000:50000
+      - 443:443
+    volumes:
+      - jenkins_data:/jenkins/jenkins-data
+    environment:
+      JENKINS_PASSWORD : bitnami
+      JENKINS_USERNAME : admin
+      JENKINS_EMAIL : idubi.pro@gmail.com
+volumes:
+  jenkins_data:
+    driver: local
+    driver_opts:
+      device: D:\\projects\\WorldOfGame\\jenkins\\jenkins-data
 networks:
   jenkins-network:
-    external: 
-      name: jenkins-network
+    name: jenkins-network
+    external: true
   
 
 
