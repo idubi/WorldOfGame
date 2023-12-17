@@ -17,37 +17,44 @@ this volum contains all needed for jenkins allready install in order to load jen
 ## 
 
     docker run -d -p 8080:8080 -p 8000:80 -p 50000:50000 -p 443:443 \
-    	   --name jenkins --network jenkins-network --volume "D:\projects\WorldOfGame\jenkins\jenkins-data":/var/jenkins_home \ 
+    	   --name jenkins --network jenkins-network --volume "<PATH_TO_GIT_LOCAL>\jenkins\jenkins-data":/var/jenkins_home \ 
     	   --env JENKINS_USERNAME=admin --env JENKINS_PASSWORD=bitnami --env JENKINS_EMAIL=idubi.pro@gmail.com jenkins/jenkins:latest
 
 - the user is created with admin/bitnami , but saved with admin/admin (after loading the volume iut is changed within volume congfiguration)
 **user : admin/admin**
 
-
+![win-agent before execution](https://github.com/idubi/WorldOfGame/blob/main/resources/images/win-agent%20not%20active.jpg?raw=true)
 
 **2**  . for windws agent to run you will need to execite this 2 commands: 
 
     1. curl.exe -sO http://localhost:8080/jnlpJars/agent.jar
     2. java -jar agent.jar -url http://localhost:8080/ -secret 662069054a25e40cb0e83bc2af14418a2b4e3978296604d3cae07250e13c3741 -name "win-agent" -workDir "d:\jenkins_agent_executions\win-agent"
  
-in oder to execute the deploymnent just go to : 
+
+![after activating agent](https://github.com/idubi/WorldOfGame/blob/main/resources/images/win-agent%20active.jpg?raw=true)
+
+
+in oder to execute the deploymnent just go to world-of-games  workspace : 
+![world-of-games workspace](https://github.com/idubi/WorldOfGame/blob/main/resources/images/world%20of%20games%20workspace.jpg?raw=true)
+
 (after the setup this link will be availabele in created jenkins)
 -   [deploy world-of-games](http://localhost:8080/job/world-of-games/job/deploy%20world-of-games/)
-and execute deployment with parameters 
-
-deployment parameters ar : 
+and execute build with parameters 
+![deploy with parametetrs](https://github.com/idubi/WorldOfGame/blob/main/resources/images/build%20with%20parameters.jpg?raw=true)
+deployment parameters are (as explained in the jenkins deployment) : 
 1. the type of execution (can be VERSION < RELEASE and BUILD ) - the build is promoting each of the parts of the tagname accordingly 
 2. numbet of images to leave in the dockerhub repository
 
 since my  GIT repo and the DOCKER are private , the login credentials are encrypted as jenkins credentiols and the deployment read it while executions
-
-the specific git repo is public, sicne you need to first clone this repo to get started, but on a production this would had been done on a different repo
-
-
+![encrypted credentials](https://github.com/idubi/WorldOfGame/blob/main/resources/images/jenkisn%20credentials.jpg?raw=true)
+the specific git repo is public, sicne you need to first clone this repo to get started, but **on a production this would had been done on a different repo**
 
 
 
 # Deployment Process
+
+![](https://raw.githubusercontent.com/idubi/WorldOfGame/main/resources/images/deploy%20world%20of%20games.jpg)
+
 the deployment process has this parts / stages   (see jenkinsfile): 
 1. Clean Workspace - delete the workspace files from win agent
 2. checkout from github - the main branch
@@ -68,6 +75,7 @@ current test is actually testing that the scores table was created with the depl
  - [ ] delete redubdent images from repository according to parameter, and latest version
  - [ ] push the created repo with created new tagname  and set it as latest
 
+![dockerhub repo : idubi/world-of-games](https://github.com/idubi/WorldOfGame/blob/main/resources/images/dockerhub%20repo.jpg?raw=true)
 
 9. logout from dockerhub - this is done even if one of the previous steps is failed
 
