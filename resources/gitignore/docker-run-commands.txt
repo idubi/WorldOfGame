@@ -81,6 +81,9 @@ docker run -d -p 8080:8080  -p 8000:80 -p 50000:50000 -p443:443 --name jenkins -
 
 docker run -it --privileged --name dind -d docker:dind
 
+apk add openjdk11
+
+
 
 docker volume create genkins-vol
 
@@ -96,3 +99,13 @@ docker run -d -p 8080:8080 -p 8000:80 -p 50000:50000 -p 443:443 \
 --name jenkins --network jenkins-network --volume "D:\projects\WorldOfGame\jenkins\jenkins-data":/var/jenkins_home \
    --env JENKINS_USERNAME=admin --env JENKINS_PASSWORD=bitnami --env JENKINS_EMAIL=idubi.pro@gmail.com jenkins/jenkins:latest
 
+
+
+curl -sO http://host.docker.internal:8080/jnlpJars/agent.jar;java -jar agent.jar -url http://host.docker.internal:8080/ -secret a75e3766f4de975c4f4c5561eae36a3bf854f43c41baa3a33ed05084447a2cae -name "docker-agent" -workDir "D:\jenkins_agent_executions\docker-agent"
+
+
+/host.docker.internal
+
+
+curl.exe -sO http://localhost:8080/jnlpJars/agent.jar
+java -jar agent.jar -url http://localhost:8080/ -secret 662069054a25e40cb0e83bc2af14418a2b4e3978296604d3cae07250e13c3741 -name "win-agent" -workDir "d:\jenkins_agent_executions\win-agent"

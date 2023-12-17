@@ -1,7 +1,13 @@
 properties([  githubProjectProperty(displayName: 'deploy world of game after pull request - ci part (checkout , build a docker image, and test)', 
                                     projectUrlStr: 'https://github.com/idubi/WorldOfGame/'), 
-              
-              ])
+              parameters([choice(choices: ['BUILD', 'RELEASE', 'VERSION'], description: '''build structure :  V.R.B
+                             this is the type of the build - if we do a release , a verison or build 
+                                V - verison 
+                                R - release 
+                                B -= build
+                             according to the type we increase each thime the number of build''', name: 'BUILD_TYPE'), 
+                          string(defaultValue: '4', description: 'how many last builds to keep in the docker hub', name: 'BUILD_KEEP_RETENTION', trim: true)])
+            ])
                 pipeline {
                     agent  {
                                     label "win-agent"
@@ -68,7 +74,6 @@ properties([  githubProjectProperty(displayName: 'deploy world of game after pul
                         stage('E2E test on exported port') {
                             steps {
                                 script {
-                                    bat 'pip install selenium'
                                     bat 'python ./tests/E2E_Score_Unites.py'
                                 }
                             }
@@ -93,9 +98,7 @@ properties([  githubProjectProperty(displayName: 'deploy world of game after pul
         }
                         stage('push to dockerhub') {
                             steps   {
-                                    powershell("""
-                                        .\\jenkins\\docker-commands\\dockerhub-push.ps1
-                                    """)                            
+                                    bat "python ./docker/docker-hub-utils.py $DOCKERHUB_CREDENTIALS_USR $DOCKERHUB_CREDENTIALS_PSW world-of-games ${env.BUILD_TYPE} ${env.BUILD_KEEP_RETENTION}"
                                 }    
                         }
                     } 

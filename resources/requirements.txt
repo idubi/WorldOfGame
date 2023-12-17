@@ -1,6 +1,10 @@
 Flask==2.3.2
-Flask-Cors==3.0.10
-python-bidi==0.4.2
-requests==2.31.0
-selenium
-flask_swagger_ui
+Flask_Cors==4.0.0
+flask_swagger_ui==4.11.1
+pytest==7.4.3
+Requests==2.31.0
+
+# sys
+# json
+# subprocess
+

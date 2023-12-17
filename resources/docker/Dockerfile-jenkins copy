@@ -1,3 +1,0 @@
-docker run -d --privileged -p 8080:8080 -p 8000:80 -p 50000:50000 -p 443:443 \
---name jenkins --network jenkins-network --volume "D:\projects\WorldOfGame\jenkins\jenkins-data":/var/jenkins_home \
-   --env JENKINS_USERNAME=admin --env JENKINS_PASSWORD=bitnami --env JENKINS_EMAIL=idubi.pro@gmail.com jenkins/jenkins:latest
